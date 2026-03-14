@@ -2,291 +2,263 @@
 // @generated from file signals.proto (package tinkoff.public.invest.api.contract.v1, syntax proto3)
 /* eslint-disable */
 
-import type { Message } from "@bufbuild/protobuf";
-import type {
-	GenEnum,
-	GenFile,
-	GenMessage,
-	GenService,
-} from "@bufbuild/protobuf/codegenv2";
-import {
-	enumDesc,
-	fileDesc,
-	messageDesc,
-	serviceDesc,
-} from "@bufbuild/protobuf/codegenv2";
+import type { GenEnum, GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
+import { enumDesc, fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
 import type { Timestamp } from "@bufbuild/protobuf/wkt";
 import { file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
+import { file_google_api_field_behavior } from "./google/api/field_behavior_pb.ts";
 import type { Page, PageResponse, Quotation } from "./common_pb.ts";
 import { file_common } from "./common_pb.ts";
-import { file_google_api_field_behavior } from "./google/api/field_behavior_pb.ts";
+import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file signals.proto.
  */
-export const file_signals: GenFile =
-	/*@__PURE__*/
-	fileDesc(
-		"Cg1zaWduYWxzLnByb3RvEiV0aW5rb2ZmLnB1YmxpYy5pbnZlc3QuYXBpLmNvbnRyYWN0LnYxIkAKFEdldFN0cmF0ZWdpZXNSZXF1ZXN0EhgKC3N0cmF0ZWd5X2lkGAEgASgJSACIAQFCDgoMX3N0cmF0ZWd5X2lkIlwKFUdldFN0cmF0ZWdpZXNSZXNwb25zZRJDCgpzdHJhdGVnaWVzGAEgAygLMi8udGlua29mZi5wdWJsaWMuaW52ZXN0LmFwaS5jb250cmFjdC52MS5TdHJhdGVneSKbBQoIU3RyYXRlZ3kSGQoLc3RyYXRlZ3lfaWQYASABKAlCBOJBAQISGwoNc3RyYXRlZ3lfbmFtZRgCIAEoCUIE4kEBAhIhChRzdHJhdGVneV9kZXNjcmlwdGlvbhgDIAEoCUgAiAEBEhkKDHN0cmF0ZWd5X3VybBgEIAEoCUgBiAEBElAKDXN0cmF0ZWd5X3R5cGUYBSABKA4yMy50aW5rb2ZmLnB1YmxpYy5pbnZlc3QuYXBpLmNvbnRyYWN0LnYxLlN0cmF0ZWd5VHlwZUIE4kEBAhIcCg5hY3RpdmVfc2lnbmFscxgGIAEoBUIE4kEBAhIbCg10b3RhbF9zaWduYWxzGAcgASgFQgTiQQECEh4KEHRpbWVfaW5fcG9zaXRpb24YCCABKANCBOJBAQISVAoUYXZlcmFnZV9zaWduYWxfeWllbGQYCSABKAsyMC50aW5rb2ZmLnB1YmxpYy5pbnZlc3QuYXBpLmNvbnRyYWN0LnYxLlF1b3RhdGlvbkIE4kEBAhJZChlhdmVyYWdlX3NpZ25hbF95aWVsZF95ZWFyGAogASgLMjAudGlua29mZi5wdWJsaWMuaW52ZXN0LmFwaS5jb250cmFjdC52MS5RdW90YXRpb25CBOJBAQISRQoFeWllbGQYCyABKAsyMC50aW5rb2ZmLnB1YmxpYy5pbnZlc3QuYXBpLmNvbnRyYWN0LnYxLlF1b3RhdGlvbkIE4kEBAhJKCgp5aWVsZF95ZWFyGAwgASgLMjAudGlua29mZi5wdWJsaWMuaW52ZXN0LmFwaS5jb250cmFjdC52MS5RdW90YXRpb25CBOJBAQJCFwoVX3N0cmF0ZWd5X2Rlc2NyaXB0aW9uQg8KDV9zdHJhdGVneV91cmwi4QQKEUdldFNpZ25hbHNSZXF1ZXN0EhYKCXNpZ25hbF9pZBgBIAEoCUgAiAEBEhgKC3N0cmF0ZWd5X2lkGAIgASgJSAGIAQESTwoNc3RyYXRlZ3lfdHlwZRgDIAEoDjIzLnRpbmtvZmYucHVibGljLmludmVzdC5hcGkuY29udHJhY3QudjEuU3RyYXRlZ3lUeXBlSAKIAQESGwoOaW5zdHJ1bWVudF91aWQYBCABKAlIA4gBARItCgRmcm9tGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgEiAEBEisKAnRvGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgFiAEBEk4KCWRpcmVjdGlvbhgHIAEoDjI2LnRpbmtvZmYucHVibGljLmludmVzdC5hcGkuY29udHJhY3QudjEuU2lnbmFsRGlyZWN0aW9uSAaIAQESRwoGYWN0aXZlGAggASgOMjIudGlua29mZi5wdWJsaWMuaW52ZXN0LmFwaS5jb250cmFjdC52MS5TaWduYWxTdGF0ZUgHiAEBEkAKBnBhZ2luZxgJIAEoCzIrLnRpbmtvZmYucHVibGljLmludmVzdC5hcGkuY29udHJhY3QudjEuUGFnZUgIiAEBQgwKCl9zaWduYWxfaWRCDgoMX3N0cmF0ZWd5X2lkQhAKDl9zdHJhdGVneV90eXBlQhEKD19pbnN0cnVtZW50X3VpZEIHCgVfZnJvbUIFCgNfdG9CDAoKX2RpcmVjdGlvbkIJCgdfYWN0aXZlQgkKB19wYWdpbmcimQEKEkdldFNpZ25hbHNSZXNwb25zZRI+CgdzaWduYWxzGAEgAygLMi0udGlua29mZi5wdWJsaWMuaW52ZXN0LmFwaS5jb250cmFjdC52MS5TaWduYWwSQwoGcGFnaW5nGAIgASgLMjMudGlua29mZi5wdWJsaWMuaW52ZXN0LmFwaS5jb250cmFjdC52MS5QYWdlUmVzcG9uc2UimAYKBlNpZ25hbBIXCglzaWduYWxfaWQYASABKAlCBOJBAQISGQoLc3RyYXRlZ3lfaWQYAiABKAlCBOJBAQISGwoNc3RyYXRlZ3lfbmFtZRgDIAEoCUIE4kEBAhIcCg5pbnN0cnVtZW50X3VpZBgEIAEoCUIE4kEBAhIzCgljcmVhdGVfZHQYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQECEk8KCWRpcmVjdGlvbhgGIAEoDjI2LnRpbmtvZmYucHVibGljLmludmVzdC5hcGkuY29udHJhY3QudjEuU2lnbmFsRGlyZWN0aW9uQgTiQQECEk0KDWluaXRpYWxfcHJpY2UYByABKAsyMC50aW5rb2ZmLnB1YmxpYy5pbnZlc3QuYXBpLmNvbnRyYWN0LnYxLlF1b3RhdGlvbkIE4kEBAhIRCgRpbmZvGAggASgJSACIAQESEgoEbmFtZRgJIAEoCUIE4kEBAhJMCgx0YXJnZXRfcHJpY2UYCiABKAsyMC50aW5rb2ZmLnB1YmxpYy5pbnZlc3QuYXBpLmNvbnRyYWN0LnYxLlF1b3RhdGlvbkIE4kEBAhIwCgZlbmRfZHQYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQECEhgKC3Byb2JhYmlsaXR5GAwgASgFSAGIAQESRwoIc3RvcGxvc3MYDSABKAsyMC50aW5rb2ZmLnB1YmxpYy5pbnZlc3QuYXBpLmNvbnRyYWN0LnYxLlF1b3RhdGlvbkgCiAEBEkoKC2Nsb3NlX3ByaWNlGA4gASgLMjAudGlua29mZi5wdWJsaWMuaW52ZXN0LmFwaS5jb250cmFjdC52MS5RdW90YXRpb25IA4gBARIxCghjbG9zZV9kdBgPIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIBIgBAUIHCgVfaW5mb0IOCgxfcHJvYmFiaWxpdHlCCwoJX3N0b3Bsb3NzQg4KDF9jbG9zZV9wcmljZUILCglfY2xvc2VfZHQqaQoMU3RyYXRlZ3lUeXBlEh0KGVNUUkFURUdZX1RZUEVfVU5TUEVDSUZJRUQQABIbChdTVFJBVEVHWV9UWVBFX1RFQ0hOSUNBTBABEh0KGVNUUkFURUdZX1RZUEVfRlVOREFNRU5UQUwQAipoCg9TaWduYWxEaXJlY3Rpb24SIAocU0lHTkFMX0RJUkVDVElPTl9VTlNQRUNJRklFRBAAEhgKFFNJR05BTF9ESVJFQ1RJT05fQlVZEAESGQoVU0lHTkFMX0RJUkVDVElPTl9TRUxMEAIqcwoLU2lnbmFsU3RhdGUSHAoYU0lHTkFMX1NUQVRFX1VOU1BFQ0lGSUVEEAASFwoTU0lHTkFMX1NUQVRFX0FDVElWRRABEhcKE1NJR05BTF9TVEFURV9DTE9TRUQQAhIUChBTSUdOQUxfU1RBVEVfQUxMEAMyoAIKDVNpZ25hbFNlcnZpY2USigEKDUdldFN0cmF0ZWdpZXMSOy50aW5rb2ZmLnB1YmxpYy5pbnZlc3QuYXBpLmNvbnRyYWN0LnYxLkdldFN0cmF0ZWdpZXNSZXF1ZXN0GjwudGlua29mZi5wdWJsaWMuaW52ZXN0LmFwaS5jb250cmFjdC52MS5HZXRTdHJhdGVnaWVzUmVzcG9uc2USgQEKCkdldFNpZ25hbHMSOC50aW5rb2ZmLnB1YmxpYy5pbnZlc3QuYXBpLmNvbnRyYWN0LnYxLkdldFNpZ25hbHNSZXF1ZXN0GjkudGlua29mZi5wdWJsaWMuaW52ZXN0LmFwaS5jb250cmFjdC52MS5HZXRTaWduYWxzUmVzcG9uc2VCYQoccnUudGlua29mZi5waWFwaS5jb250cmFjdC52MVABWgwuLztpbnZlc3RhcGmiAgVUSUFQSaoCFFRpbmtvZmYuSW52ZXN0QXBpLlYxygIRVGlua29mZlxJbnZlc3RcVjFiBnByb3RvMw",
-		[
-			file_google_protobuf_timestamp,
-			file_google_api_field_behavior,
-			file_common,
-		],
-	);
+export const file_signals: GenFile = /*@__PURE__*/
+  fileDesc("Cg1zaWduYWxzLnByb3RvEiV0aW5rb2ZmLnB1YmxpYy5pbnZlc3QuYXBpLmNvbnRyYWN0LnYxIkAKFEdldFN0cmF0ZWdpZXNSZXF1ZXN0EhgKC3N0cmF0ZWd5X2lkGAEgASgJSACIAQFCDgoMX3N0cmF0ZWd5X2lkIlwKFUdldFN0cmF0ZWdpZXNSZXNwb25zZRJDCgpzdHJhdGVnaWVzGAEgAygLMi8udGlua29mZi5wdWJsaWMuaW52ZXN0LmFwaS5jb250cmFjdC52MS5TdHJhdGVneSKbBQoIU3RyYXRlZ3kSGQoLc3RyYXRlZ3lfaWQYASABKAlCBOJBAQISGwoNc3RyYXRlZ3lfbmFtZRgCIAEoCUIE4kEBAhIhChRzdHJhdGVneV9kZXNjcmlwdGlvbhgDIAEoCUgAiAEBEhkKDHN0cmF0ZWd5X3VybBgEIAEoCUgBiAEBElAKDXN0cmF0ZWd5X3R5cGUYBSABKA4yMy50aW5rb2ZmLnB1YmxpYy5pbnZlc3QuYXBpLmNvbnRyYWN0LnYxLlN0cmF0ZWd5VHlwZUIE4kEBAhIcCg5hY3RpdmVfc2lnbmFscxgGIAEoBUIE4kEBAhIbCg10b3RhbF9zaWduYWxzGAcgASgFQgTiQQECEh4KEHRpbWVfaW5fcG9zaXRpb24YCCABKANCBOJBAQISVAoUYXZlcmFnZV9zaWduYWxfeWllbGQYCSABKAsyMC50aW5rb2ZmLnB1YmxpYy5pbnZlc3QuYXBpLmNvbnRyYWN0LnYxLlF1b3RhdGlvbkIE4kEBAhJZChlhdmVyYWdlX3NpZ25hbF95aWVsZF95ZWFyGAogASgLMjAudGlua29mZi5wdWJsaWMuaW52ZXN0LmFwaS5jb250cmFjdC52MS5RdW90YXRpb25CBOJBAQISRQoFeWllbGQYCyABKAsyMC50aW5rb2ZmLnB1YmxpYy5pbnZlc3QuYXBpLmNvbnRyYWN0LnYxLlF1b3RhdGlvbkIE4kEBAhJKCgp5aWVsZF95ZWFyGAwgASgLMjAudGlua29mZi5wdWJsaWMuaW52ZXN0LmFwaS5jb250cmFjdC52MS5RdW90YXRpb25CBOJBAQJCFwoVX3N0cmF0ZWd5X2Rlc2NyaXB0aW9uQg8KDV9zdHJhdGVneV91cmwi4QQKEUdldFNpZ25hbHNSZXF1ZXN0EhYKCXNpZ25hbF9pZBgBIAEoCUgAiAEBEhgKC3N0cmF0ZWd5X2lkGAIgASgJSAGIAQESTwoNc3RyYXRlZ3lfdHlwZRgDIAEoDjIzLnRpbmtvZmYucHVibGljLmludmVzdC5hcGkuY29udHJhY3QudjEuU3RyYXRlZ3lUeXBlSAKIAQESGwoOaW5zdHJ1bWVudF91aWQYBCABKAlIA4gBARItCgRmcm9tGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgEiAEBEisKAnRvGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgFiAEBEk4KCWRpcmVjdGlvbhgHIAEoDjI2LnRpbmtvZmYucHVibGljLmludmVzdC5hcGkuY29udHJhY3QudjEuU2lnbmFsRGlyZWN0aW9uSAaIAQESRwoGYWN0aXZlGAggASgOMjIudGlua29mZi5wdWJsaWMuaW52ZXN0LmFwaS5jb250cmFjdC52MS5TaWduYWxTdGF0ZUgHiAEBEkAKBnBhZ2luZxgJIAEoCzIrLnRpbmtvZmYucHVibGljLmludmVzdC5hcGkuY29udHJhY3QudjEuUGFnZUgIiAEBQgwKCl9zaWduYWxfaWRCDgoMX3N0cmF0ZWd5X2lkQhAKDl9zdHJhdGVneV90eXBlQhEKD19pbnN0cnVtZW50X3VpZEIHCgVfZnJvbUIFCgNfdG9CDAoKX2RpcmVjdGlvbkIJCgdfYWN0aXZlQgkKB19wYWdpbmcimQEKEkdldFNpZ25hbHNSZXNwb25zZRI+CgdzaWduYWxzGAEgAygLMi0udGlua29mZi5wdWJsaWMuaW52ZXN0LmFwaS5jb250cmFjdC52MS5TaWduYWwSQwoGcGFnaW5nGAIgASgLMjMudGlua29mZi5wdWJsaWMuaW52ZXN0LmFwaS5jb250cmFjdC52MS5QYWdlUmVzcG9uc2UimAYKBlNpZ25hbBIXCglzaWduYWxfaWQYASABKAlCBOJBAQISGQoLc3RyYXRlZ3lfaWQYAiABKAlCBOJBAQISGwoNc3RyYXRlZ3lfbmFtZRgDIAEoCUIE4kEBAhIcCg5pbnN0cnVtZW50X3VpZBgEIAEoCUIE4kEBAhIzCgljcmVhdGVfZHQYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQECEk8KCWRpcmVjdGlvbhgGIAEoDjI2LnRpbmtvZmYucHVibGljLmludmVzdC5hcGkuY29udHJhY3QudjEuU2lnbmFsRGlyZWN0aW9uQgTiQQECEk0KDWluaXRpYWxfcHJpY2UYByABKAsyMC50aW5rb2ZmLnB1YmxpYy5pbnZlc3QuYXBpLmNvbnRyYWN0LnYxLlF1b3RhdGlvbkIE4kEBAhIRCgRpbmZvGAggASgJSACIAQESEgoEbmFtZRgJIAEoCUIE4kEBAhJMCgx0YXJnZXRfcHJpY2UYCiABKAsyMC50aW5rb2ZmLnB1YmxpYy5pbnZlc3QuYXBpLmNvbnRyYWN0LnYxLlF1b3RhdGlvbkIE4kEBAhIwCgZlbmRfZHQYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQECEhgKC3Byb2JhYmlsaXR5GAwgASgFSAGIAQESRwoIc3RvcGxvc3MYDSABKAsyMC50aW5rb2ZmLnB1YmxpYy5pbnZlc3QuYXBpLmNvbnRyYWN0LnYxLlF1b3RhdGlvbkgCiAEBEkoKC2Nsb3NlX3ByaWNlGA4gASgLMjAudGlua29mZi5wdWJsaWMuaW52ZXN0LmFwaS5jb250cmFjdC52MS5RdW90YXRpb25IA4gBARIxCghjbG9zZV9kdBgPIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIBIgBAUIHCgVfaW5mb0IOCgxfcHJvYmFiaWxpdHlCCwoJX3N0b3Bsb3NzQg4KDF9jbG9zZV9wcmljZUILCglfY2xvc2VfZHQqaQoMU3RyYXRlZ3lUeXBlEh0KGVNUUkFURUdZX1RZUEVfVU5TUEVDSUZJRUQQABIbChdTVFJBVEVHWV9UWVBFX1RFQ0hOSUNBTBABEh0KGVNUUkFURUdZX1RZUEVfRlVOREFNRU5UQUwQAipoCg9TaWduYWxEaXJlY3Rpb24SIAocU0lHTkFMX0RJUkVDVElPTl9VTlNQRUNJRklFRBAAEhgKFFNJR05BTF9ESVJFQ1RJT05fQlVZEAESGQoVU0lHTkFMX0RJUkVDVElPTl9TRUxMEAIqcwoLU2lnbmFsU3RhdGUSHAoYU0lHTkFMX1NUQVRFX1VOU1BFQ0lGSUVEEAASFwoTU0lHTkFMX1NUQVRFX0FDVElWRRABEhcKE1NJR05BTF9TVEFURV9DTE9TRUQQAhIUChBTSUdOQUxfU1RBVEVfQUxMEAMyoAIKDVNpZ25hbFNlcnZpY2USigEKDUdldFN0cmF0ZWdpZXMSOy50aW5rb2ZmLnB1YmxpYy5pbnZlc3QuYXBpLmNvbnRyYWN0LnYxLkdldFN0cmF0ZWdpZXNSZXF1ZXN0GjwudGlua29mZi5wdWJsaWMuaW52ZXN0LmFwaS5jb250cmFjdC52MS5HZXRTdHJhdGVnaWVzUmVzcG9uc2USgQEKCkdldFNpZ25hbHMSOC50aW5rb2ZmLnB1YmxpYy5pbnZlc3QuYXBpLmNvbnRyYWN0LnYxLkdldFNpZ25hbHNSZXF1ZXN0GjkudGlua29mZi5wdWJsaWMuaW52ZXN0LmFwaS5jb250cmFjdC52MS5HZXRTaWduYWxzUmVzcG9uc2VCYQoccnUudGlua29mZi5waWFwaS5jb250cmFjdC52MVABWgwuLztpbnZlc3RhcGmiAgVUSUFQSaoCFFRpbmtvZmYuSW52ZXN0QXBpLlYxygIRVGlua29mZlxJbnZlc3RcVjFiBnByb3RvMw", [file_google_protobuf_timestamp, file_google_api_field_behavior, file_common]);
 
 /**
  * Запрос стратегий.
  *
  * @generated from message tinkoff.public.invest.api.contract.v1.GetStrategiesRequest
  */
-export type GetStrategiesRequest =
-	Message<"tinkoff.public.invest.api.contract.v1.GetStrategiesRequest"> & {
-		/**
-		 * Идентификатор стратегии.
-		 *
-		 * @generated from field: optional string strategy_id = 1;
-		 */
-		strategyId?: string;
-	};
+export type GetStrategiesRequest = Message<"tinkoff.public.invest.api.contract.v1.GetStrategiesRequest"> & {
+  /**
+   * Идентификатор стратегии.
+   *
+   * @generated from field: optional string strategy_id = 1;
+   */
+  strategyId?: string;
+};
 
 /**
  * Describes the message tinkoff.public.invest.api.contract.v1.GetStrategiesRequest.
  * Use `create(GetStrategiesRequestSchema)` to create a new message.
  */
-export const GetStrategiesRequestSchema: GenMessage<GetStrategiesRequest> =
-	/*@__PURE__*/
-	messageDesc(file_signals, 0);
+export const GetStrategiesRequestSchema: GenMessage<GetStrategiesRequest> = /*@__PURE__*/
+  messageDesc(file_signals, 0);
 
 /**
  * Стратегии
  *
  * @generated from message tinkoff.public.invest.api.contract.v1.GetStrategiesResponse
  */
-export type GetStrategiesResponse =
-	Message<"tinkoff.public.invest.api.contract.v1.GetStrategiesResponse"> & {
-		/**
-		 * @generated from field: repeated tinkoff.public.invest.api.contract.v1.Strategy strategies = 1;
-		 */
-		strategies: Strategy[];
-	};
+export type GetStrategiesResponse = Message<"tinkoff.public.invest.api.contract.v1.GetStrategiesResponse"> & {
+  /**
+   * @generated from field: repeated tinkoff.public.invest.api.contract.v1.Strategy strategies = 1;
+   */
+  strategies: Strategy[];
+};
 
 /**
  * Describes the message tinkoff.public.invest.api.contract.v1.GetStrategiesResponse.
  * Use `create(GetStrategiesResponseSchema)` to create a new message.
  */
-export const GetStrategiesResponseSchema: GenMessage<GetStrategiesResponse> =
-	/*@__PURE__*/
-	messageDesc(file_signals, 1);
+export const GetStrategiesResponseSchema: GenMessage<GetStrategiesResponse> = /*@__PURE__*/
+  messageDesc(file_signals, 1);
 
 /**
  * Стратегия
  *
  * @generated from message tinkoff.public.invest.api.contract.v1.Strategy
  */
-export type Strategy =
-	Message<"tinkoff.public.invest.api.contract.v1.Strategy"> & {
-		/**
-		 * Идентификатор стратегии.
-		 *
-		 * @generated from field: string strategy_id = 1;
-		 */
-		strategyId: string;
+export type Strategy = Message<"tinkoff.public.invest.api.contract.v1.Strategy"> & {
+  /**
+   * Идентификатор стратегии.
+   *
+   * @generated from field: string strategy_id = 1;
+   */
+  strategyId: string;
 
-		/**
-		 * Название стратегии.
-		 *
-		 * @generated from field: string strategy_name = 2;
-		 */
-		strategyName: string;
+  /**
+   * Название стратегии.
+   *
+   * @generated from field: string strategy_name = 2;
+   */
+  strategyName: string;
 
-		/**
-		 * Описание стратегии.
-		 *
-		 * @generated from field: optional string strategy_description = 3;
-		 */
-		strategyDescription?: string;
+  /**
+   * Описание стратегии.
+   *
+   * @generated from field: optional string strategy_description = 3;
+   */
+  strategyDescription?: string;
 
-		/**
-		 * Ссылка на страницу с описанием стратегии.
-		 *
-		 * @generated from field: optional string strategy_url = 4;
-		 */
-		strategyUrl?: string;
+  /**
+   * Ссылка на страницу с описанием стратегии.
+   *
+   * @generated from field: optional string strategy_url = 4;
+   */
+  strategyUrl?: string;
 
-		/**
-		 * Тип стратегии.
-		 *
-		 * @generated from field: tinkoff.public.invest.api.contract.v1.StrategyType strategy_type = 5;
-		 */
-		strategyType: StrategyType;
+  /**
+   * Тип стратегии.
+   *
+   * @generated from field: tinkoff.public.invest.api.contract.v1.StrategyType strategy_type = 5;
+   */
+  strategyType: StrategyType;
 
-		/**
-		 * Количество активных сигналов.
-		 *
-		 * @generated from field: int32 active_signals = 6;
-		 */
-		activeSignals: number;
+  /**
+   * Количество активных сигналов.
+   *
+   * @generated from field: int32 active_signals = 6;
+   */
+  activeSignals: number;
 
-		/**
-		 * Общее количество сигналов.
-		 *
-		 * @generated from field: int32 total_signals = 7;
-		 */
-		totalSignals: number;
+  /**
+   * Общее количество сигналов.
+   *
+   * @generated from field: int32 total_signals = 7;
+   */
+  totalSignals: number;
 
-		/**
-		 * Среднее время нахождения сигнала в позиции.
-		 *
-		 * @generated from field: int64 time_in_position = 8;
-		 */
-		timeInPosition: bigint;
+  /**
+   * Среднее время нахождения сигнала в позиции.
+   *
+   * @generated from field: int64 time_in_position = 8;
+   */
+  timeInPosition: bigint;
 
-		/**
-		 * Средняя доходность сигнала в стратегии.
-		 *
-		 * @generated from field: tinkoff.public.invest.api.contract.v1.Quotation average_signal_yield = 9;
-		 */
-		averageSignalYield?: Quotation;
+  /**
+   * Средняя доходность сигнала в стратегии.
+   *
+   * @generated from field: tinkoff.public.invest.api.contract.v1.Quotation average_signal_yield = 9;
+   */
+  averageSignalYield?: Quotation;
 
-		/**
-		 * Средняя доходность сигналов в стратегии за последний год.
-		 *
-		 * @generated from field: tinkoff.public.invest.api.contract.v1.Quotation average_signal_yield_year = 10;
-		 */
-		averageSignalYieldYear?: Quotation;
+  /**
+   * Средняя доходность сигналов в стратегии за последний год.
+   *
+   * @generated from field: tinkoff.public.invest.api.contract.v1.Quotation average_signal_yield_year = 10;
+   */
+  averageSignalYieldYear?: Quotation;
 
-		/**
-		 * Доходность стратегии.
-		 *
-		 * @generated from field: tinkoff.public.invest.api.contract.v1.Quotation yield = 11;
-		 */
-		yield?: Quotation;
+  /**
+   * Доходность стратегии.
+   *
+   * @generated from field: tinkoff.public.invest.api.contract.v1.Quotation yield = 11;
+   */
+  yield?: Quotation;
 
-		/**
-		 * Доходность стратегии за последний год.
-		 *
-		 * @generated from field: tinkoff.public.invest.api.contract.v1.Quotation yield_year = 12;
-		 */
-		yieldYear?: Quotation;
-	};
+  /**
+   * Доходность стратегии за последний год.
+   *
+   * @generated from field: tinkoff.public.invest.api.contract.v1.Quotation yield_year = 12;
+   */
+  yieldYear?: Quotation;
+};
 
 /**
  * Describes the message tinkoff.public.invest.api.contract.v1.Strategy.
  * Use `create(StrategySchema)` to create a new message.
  */
-export const StrategySchema: GenMessage<Strategy> =
-	/*@__PURE__*/
-	messageDesc(file_signals, 2);
+export const StrategySchema: GenMessage<Strategy> = /*@__PURE__*/
+  messageDesc(file_signals, 2);
 
 /**
  * Запрос сигналов.
  *
  * @generated from message tinkoff.public.invest.api.contract.v1.GetSignalsRequest
  */
-export type GetSignalsRequest =
-	Message<"tinkoff.public.invest.api.contract.v1.GetSignalsRequest"> & {
-		/**
-		 * Идентификатор сигнала.
-		 *
-		 * @generated from field: optional string signal_id = 1;
-		 */
-		signalId?: string;
+export type GetSignalsRequest = Message<"tinkoff.public.invest.api.contract.v1.GetSignalsRequest"> & {
+  /**
+   * Идентификатор сигнала.
+   *
+   * @generated from field: optional string signal_id = 1;
+   */
+  signalId?: string;
 
-		/**
-		 * Идентификатор стратегии.
-		 *
-		 * @generated from field: optional string strategy_id = 2;
-		 */
-		strategyId?: string;
+  /**
+   * Идентификатор стратегии.
+   *
+   * @generated from field: optional string strategy_id = 2;
+   */
+  strategyId?: string;
 
-		/**
-		 * Тип стратегии.
-		 *
-		 * @generated from field: optional tinkoff.public.invest.api.contract.v1.StrategyType strategy_type = 3;
-		 */
-		strategyType?: StrategyType;
+  /**
+   * Тип стратегии.
+   *
+   * @generated from field: optional tinkoff.public.invest.api.contract.v1.StrategyType strategy_type = 3;
+   */
+  strategyType?: StrategyType;
 
-		/**
-		 * 	Идентификатор бумаги.
-		 *
-		 * @generated from field: optional string instrument_uid = 4;
-		 */
-		instrumentUid?: string;
+  /**
+   * 	Идентификатор бумаги.
+   *
+   * @generated from field: optional string instrument_uid = 4;
+   */
+  instrumentUid?: string;
 
-		/**
-		 * 	Дата начала запрашиваемого интервала по UTC.
-		 *
-		 * @generated from field: optional google.protobuf.Timestamp from = 5;
-		 */
-		from?: Timestamp;
+  /**
+   * 	Дата начала запрашиваемого интервала по UTC.
+   *
+   * @generated from field: optional google.protobuf.Timestamp from = 5;
+   */
+  from?: Timestamp;
 
-		/**
-		 * 	Дата конца запрашиваемого интервала по UTC.
-		 *
-		 * @generated from field: optional google.protobuf.Timestamp to = 6;
-		 */
-		to?: Timestamp;
+  /**
+   * 	Дата конца запрашиваемого интервала по UTC.
+   *
+   * @generated from field: optional google.protobuf.Timestamp to = 6;
+   */
+  to?: Timestamp;
 
-		/**
-		 * 	Направление сигнала.
-		 *
-		 * @generated from field: optional tinkoff.public.invest.api.contract.v1.SignalDirection direction = 7;
-		 */
-		direction?: SignalDirection;
+  /**
+   * 	Направление сигнала.
+   *
+   * @generated from field: optional tinkoff.public.invest.api.contract.v1.SignalDirection direction = 7;
+   */
+  direction?: SignalDirection;
 
-		/**
-		 * Состояние сигнала.
-		 *
-		 * @generated from field: optional tinkoff.public.invest.api.contract.v1.SignalState active = 8;
-		 */
-		active?: SignalState;
+  /**
+   * Состояние сигнала.
+   *
+   * @generated from field: optional tinkoff.public.invest.api.contract.v1.SignalState active = 8;
+   */
+  active?: SignalState;
 
-		/**
-		 * Настройки пагинации.
-		 *
-		 * @generated from field: optional tinkoff.public.invest.api.contract.v1.Page paging = 9;
-		 */
-		paging?: Page;
-	};
+  /**
+   * Настройки пагинации.
+   *
+   * @generated from field: optional tinkoff.public.invest.api.contract.v1.Page paging = 9;
+   */
+  paging?: Page;
+};
 
 /**
  * Describes the message tinkoff.public.invest.api.contract.v1.GetSignalsRequest.
  * Use `create(GetSignalsRequestSchema)` to create a new message.
  */
-export const GetSignalsRequestSchema: GenMessage<GetSignalsRequest> =
-	/*@__PURE__*/
-	messageDesc(file_signals, 3);
+export const GetSignalsRequestSchema: GenMessage<GetSignalsRequest> = /*@__PURE__*/
+  messageDesc(file_signals, 3);
 
 /**
  * Сигналы.
  *
  * @generated from message tinkoff.public.invest.api.contract.v1.GetSignalsResponse
  */
-export type GetSignalsResponse =
-	Message<"tinkoff.public.invest.api.contract.v1.GetSignalsResponse"> & {
-		/**
-		 * Массив сигналов.
-		 *
-		 * @generated from field: repeated tinkoff.public.invest.api.contract.v1.Signal signals = 1;
-		 */
-		signals: Signal[];
+export type GetSignalsResponse = Message<"tinkoff.public.invest.api.contract.v1.GetSignalsResponse"> & {
+  /**
+   * Массив сигналов.
+   *
+   * @generated from field: repeated tinkoff.public.invest.api.contract.v1.Signal signals = 1;
+   */
+  signals: Signal[];
 
-		/**
-		 * Данные по пагинации.
-		 *
-		 * @generated from field: tinkoff.public.invest.api.contract.v1.PageResponse paging = 2;
-		 */
-		paging?: PageResponse;
-	};
+  /**
+   * Данные по пагинации.
+   *
+   * @generated from field: tinkoff.public.invest.api.contract.v1.PageResponse paging = 2;
+   */
+  paging?: PageResponse;
+};
 
 /**
  * Describes the message tinkoff.public.invest.api.contract.v1.GetSignalsResponse.
  * Use `create(GetSignalsResponseSchema)` to create a new message.
  */
-export const GetSignalsResponseSchema: GenMessage<GetSignalsResponse> =
-	/*@__PURE__*/
-	messageDesc(file_signals, 4);
+export const GetSignalsResponseSchema: GenMessage<GetSignalsResponse> = /*@__PURE__*/
+  messageDesc(file_signals, 4);
 
 /**
  * Сигнал.
@@ -294,119 +266,118 @@ export const GetSignalsResponseSchema: GenMessage<GetSignalsResponse> =
  * @generated from message tinkoff.public.invest.api.contract.v1.Signal
  */
 export type Signal = Message<"tinkoff.public.invest.api.contract.v1.Signal"> & {
-	/**
-	 * Идентификатор сигнала.
-	 *
-	 * @generated from field: string signal_id = 1;
-	 */
-	signalId: string;
+  /**
+   * Идентификатор сигнала.
+   *
+   * @generated from field: string signal_id = 1;
+   */
+  signalId: string;
 
-	/**
-	 * Идентификатор стратегии.
-	 *
-	 * @generated from field: string strategy_id = 2;
-	 */
-	strategyId: string;
+  /**
+   * Идентификатор стратегии.
+   *
+   * @generated from field: string strategy_id = 2;
+   */
+  strategyId: string;
 
-	/**
-	 * Название стратегии.
-	 *
-	 * @generated from field: string strategy_name = 3;
-	 */
-	strategyName: string;
+  /**
+   * Название стратегии.
+   *
+   * @generated from field: string strategy_name = 3;
+   */
+  strategyName: string;
 
-	/**
-	 * Идентификатор бумаги.
-	 *
-	 * @generated from field: string instrument_uid = 4;
-	 */
-	instrumentUid: string;
+  /**
+   * Идентификатор бумаги.
+   *
+   * @generated from field: string instrument_uid = 4;
+   */
+  instrumentUid: string;
 
-	/**
-	 * Дата и время создания сигнала по UTC.
-	 *
-	 * @generated from field: google.protobuf.Timestamp create_dt = 5;
-	 */
-	createDt?: Timestamp;
+  /**
+   * Дата и время создания сигнала по UTC.
+   *
+   * @generated from field: google.protobuf.Timestamp create_dt = 5;
+   */
+  createDt?: Timestamp;
 
-	/**
-	 * Направление сигнала.
-	 *
-	 * @generated from field: tinkoff.public.invest.api.contract.v1.SignalDirection direction = 6;
-	 */
-	direction: SignalDirection;
+  /**
+   * Направление сигнала.
+   *
+   * @generated from field: tinkoff.public.invest.api.contract.v1.SignalDirection direction = 6;
+   */
+  direction: SignalDirection;
 
-	/**
-	 * Цена бумаги на момент формирования сигнала.
-	 *
-	 * @generated from field: tinkoff.public.invest.api.contract.v1.Quotation initial_price = 7;
-	 */
-	initialPrice?: Quotation;
+  /**
+   * Цена бумаги на момент формирования сигнала.
+   *
+   * @generated from field: tinkoff.public.invest.api.contract.v1.Quotation initial_price = 7;
+   */
+  initialPrice?: Quotation;
 
-	/**
-	 * Дополнительная информация о сигнале.
-	 *
-	 * @generated from field: optional string info = 8;
-	 */
-	info?: string;
+  /**
+   * Дополнительная информация о сигнале.
+   *
+   * @generated from field: optional string info = 8;
+   */
+  info?: string;
 
-	/**
-	 * Название сигнала.
-	 *
-	 * @generated from field: string name = 9;
-	 */
-	name: string;
+  /**
+   * Название сигнала.
+   *
+   * @generated from field: string name = 9;
+   */
+  name: string;
 
-	/**
-	 * Целевая цена.
-	 *
-	 * @generated from field: tinkoff.public.invest.api.contract.v1.Quotation target_price = 10;
-	 */
-	targetPrice?: Quotation;
+  /**
+   * Целевая цена.
+   *
+   * @generated from field: tinkoff.public.invest.api.contract.v1.Quotation target_price = 10;
+   */
+  targetPrice?: Quotation;
 
-	/**
-	 * Дата и время дедлайна сигнала по UTC.
-	 *
-	 * @generated from field: google.protobuf.Timestamp end_dt = 11;
-	 */
-	endDt?: Timestamp;
+  /**
+   * Дата и время дедлайна сигнала по UTC.
+   *
+   * @generated from field: google.protobuf.Timestamp end_dt = 11;
+   */
+  endDt?: Timestamp;
 
-	/**
-	 * Вероятность сигнала.
-	 *
-	 * @generated from field: optional int32 probability = 12;
-	 */
-	probability?: number;
+  /**
+   * Вероятность сигнала.
+   *
+   * @generated from field: optional int32 probability = 12;
+   */
+  probability?: number;
 
-	/**
-	 * Порог закрытия сигнала по стоплосс.
-	 *
-	 * @generated from field: optional tinkoff.public.invest.api.contract.v1.Quotation stoploss = 13;
-	 */
-	stoploss?: Quotation;
+  /**
+   * Порог закрытия сигнала по стоплосс.
+   *
+   * @generated from field: optional tinkoff.public.invest.api.contract.v1.Quotation stoploss = 13;
+   */
+  stoploss?: Quotation;
 
-	/**
-	 * Цена закрытия сигнала.
-	 *
-	 * @generated from field: optional tinkoff.public.invest.api.contract.v1.Quotation close_price = 14;
-	 */
-	closePrice?: Quotation;
+  /**
+   * Цена закрытия сигнала.
+   *
+   * @generated from field: optional tinkoff.public.invest.api.contract.v1.Quotation close_price = 14;
+   */
+  closePrice?: Quotation;
 
-	/**
-	 * Дата и время закрытия сигнала по UTC.
-	 *
-	 * @generated from field: optional google.protobuf.Timestamp close_dt = 15;
-	 */
-	closeDt?: Timestamp;
+  /**
+   * Дата и время закрытия сигнала по UTC.
+   *
+   * @generated from field: optional google.protobuf.Timestamp close_dt = 15;
+   */
+  closeDt?: Timestamp;
 };
 
 /**
  * Describes the message tinkoff.public.invest.api.contract.v1.Signal.
  * Use `create(SignalSchema)` to create a new message.
  */
-export const SignalSchema: GenMessage<Signal> =
-	/*@__PURE__*/
-	messageDesc(file_signals, 5);
+export const SignalSchema: GenMessage<Signal> = /*@__PURE__*/
+  messageDesc(file_signals, 5);
 
 /**
  * Тип стратегии.
@@ -414,34 +385,33 @@ export const SignalSchema: GenMessage<Signal> =
  * @generated from enum tinkoff.public.invest.api.contract.v1.StrategyType
  */
 export enum StrategyType {
-	/**
-	 * Не определен.
-	 *
-	 * @generated from enum value: STRATEGY_TYPE_UNSPECIFIED = 0;
-	 */
-	UNSPECIFIED = 0,
+  /**
+   * Не определен.
+   *
+   * @generated from enum value: STRATEGY_TYPE_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
 
-	/**
-	 * Техническая стратегия.
-	 *
-	 * @generated from enum value: STRATEGY_TYPE_TECHNICAL = 1;
-	 */
-	TECHNICAL = 1,
+  /**
+   * Техническая стратегия.
+   *
+   * @generated from enum value: STRATEGY_TYPE_TECHNICAL = 1;
+   */
+  TECHNICAL = 1,
 
-	/**
-	 * Фундаментальная стратегия.
-	 *
-	 * @generated from enum value: STRATEGY_TYPE_FUNDAMENTAL = 2;
-	 */
-	FUNDAMENTAL = 2,
+  /**
+   * Фундаментальная стратегия.
+   *
+   * @generated from enum value: STRATEGY_TYPE_FUNDAMENTAL = 2;
+   */
+  FUNDAMENTAL = 2,
 }
 
 /**
  * Describes the enum tinkoff.public.invest.api.contract.v1.StrategyType.
  */
-export const StrategyTypeSchema: GenEnum<StrategyType> =
-	/*@__PURE__*/
-	enumDesc(file_signals, 0);
+export const StrategyTypeSchema: GenEnum<StrategyType> = /*@__PURE__*/
+  enumDesc(file_signals, 0);
 
 /**
  * Направление сигнала.
@@ -449,34 +419,33 @@ export const StrategyTypeSchema: GenEnum<StrategyType> =
  * @generated from enum tinkoff.public.invest.api.contract.v1.SignalDirection
  */
 export enum SignalDirection {
-	/**
-	 * Не определен.
-	 *
-	 * @generated from enum value: SIGNAL_DIRECTION_UNSPECIFIED = 0;
-	 */
-	UNSPECIFIED = 0,
+  /**
+   * Не определен.
+   *
+   * @generated from enum value: SIGNAL_DIRECTION_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
 
-	/**
-	 * Покупка.
-	 *
-	 * @generated from enum value: SIGNAL_DIRECTION_BUY = 1;
-	 */
-	BUY = 1,
+  /**
+   * Покупка.
+   *
+   * @generated from enum value: SIGNAL_DIRECTION_BUY = 1;
+   */
+  BUY = 1,
 
-	/**
-	 * Продажа.
-	 *
-	 * @generated from enum value: SIGNAL_DIRECTION_SELL = 2;
-	 */
-	SELL = 2,
+  /**
+   * Продажа.
+   *
+   * @generated from enum value: SIGNAL_DIRECTION_SELL = 2;
+   */
+  SELL = 2,
 }
 
 /**
  * Describes the enum tinkoff.public.invest.api.contract.v1.SignalDirection.
  */
-export const SignalDirectionSchema: GenEnum<SignalDirection> =
-	/*@__PURE__*/
-	enumDesc(file_signals, 1);
+export const SignalDirectionSchema: GenEnum<SignalDirection> = /*@__PURE__*/
+  enumDesc(file_signals, 1);
 
 /**
  * Статус сигнала.
@@ -484,41 +453,40 @@ export const SignalDirectionSchema: GenEnum<SignalDirection> =
  * @generated from enum tinkoff.public.invest.api.contract.v1.SignalState
  */
 export enum SignalState {
-	/**
-	 * Не определен.
-	 *
-	 * @generated from enum value: SIGNAL_STATE_UNSPECIFIED = 0;
-	 */
-	UNSPECIFIED = 0,
+  /**
+   * Не определен.
+   *
+   * @generated from enum value: SIGNAL_STATE_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
 
-	/**
-	 * Активный сигнал.
-	 *
-	 * @generated from enum value: SIGNAL_STATE_ACTIVE = 1;
-	 */
-	ACTIVE = 1,
+  /**
+   * Активный сигнал.
+   *
+   * @generated from enum value: SIGNAL_STATE_ACTIVE = 1;
+   */
+  ACTIVE = 1,
 
-	/**
-	 * Закрытый сигнал.
-	 *
-	 * @generated from enum value: SIGNAL_STATE_CLOSED = 2;
-	 */
-	CLOSED = 2,
+  /**
+   * Закрытый сигнал.
+   *
+   * @generated from enum value: SIGNAL_STATE_CLOSED = 2;
+   */
+  CLOSED = 2,
 
-	/**
-	 * Все состояния.
-	 *
-	 * @generated from enum value: SIGNAL_STATE_ALL = 3;
-	 */
-	ALL = 3,
+  /**
+   * Все состояния.
+   *
+   * @generated from enum value: SIGNAL_STATE_ALL = 3;
+   */
+  ALL = 3,
 }
 
 /**
  * Describes the enum tinkoff.public.invest.api.contract.v1.SignalState.
  */
-export const SignalStateSchema: GenEnum<SignalState> =
-	/*@__PURE__*/
-	enumDesc(file_signals, 2);
+export const SignalStateSchema: GenEnum<SignalState> = /*@__PURE__*/
+  enumDesc(file_signals, 2);
 
 /**
  * Сервис для получения технических сигналов и мнений аналитиков по инструментам.
@@ -526,24 +494,26 @@ export const SignalStateSchema: GenEnum<SignalState> =
  * @generated from service tinkoff.public.invest.api.contract.v1.SignalService
  */
 export const SignalService: GenService<{
-	/**
-	 * GetStrategies — стратегии
-	 *
-	 * @generated from rpc tinkoff.public.invest.api.contract.v1.SignalService.GetStrategies
-	 */
-	getStrategies: {
-		methodKind: "unary";
-		input: typeof GetStrategiesRequestSchema;
-		output: typeof GetStrategiesResponseSchema;
-	};
-	/**
-	 * GetSignals — сигналы
-	 *
-	 * @generated from rpc tinkoff.public.invest.api.contract.v1.SignalService.GetSignals
-	 */
-	getSignals: {
-		methodKind: "unary";
-		input: typeof GetSignalsRequestSchema;
-		output: typeof GetSignalsResponseSchema;
-	};
-}> = /*@__PURE__*/ serviceDesc(file_signals, 0);
+  /**
+   * GetStrategies — стратегии
+   *
+   * @generated from rpc tinkoff.public.invest.api.contract.v1.SignalService.GetStrategies
+   */
+  getStrategies: {
+    methodKind: "unary";
+    input: typeof GetStrategiesRequestSchema;
+    output: typeof GetStrategiesResponseSchema;
+  },
+  /**
+   * GetSignals — сигналы
+   *
+   * @generated from rpc tinkoff.public.invest.api.contract.v1.SignalService.GetSignals
+   */
+  getSignals: {
+    methodKind: "unary";
+    input: typeof GetSignalsRequestSchema;
+    output: typeof GetSignalsResponseSchema;
+  },
+}> = /*@__PURE__*/
+  serviceDesc(file_signals, 0);
+

@@ -2,11 +2,7 @@
 // @generated from file common.proto (package tinkoff.public.invest.api.contract.v1, syntax proto3)
 /* eslint-disable */
 
-import type {
-	GenEnum,
-	GenFile,
-	GenMessage,
-} from "@bufbuild/protobuf/codegenv2";
+import type { GenEnum, GenFile, GenMessage } from "@bufbuild/protobuf/codegenv2";
 import { enumDesc, fileDesc, messageDesc } from "@bufbuild/protobuf/codegenv2";
 import type { Timestamp } from "@bufbuild/protobuf/wkt";
 import { file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
@@ -15,121 +11,109 @@ import type { Message } from "@bufbuild/protobuf";
 /**
  * Describes the file common.proto.
  */
-export const file_common: GenFile =
-	/*@__PURE__*/
-	fileDesc(
-		"Cgxjb21tb24ucHJvdG8SJXRpbmtvZmYucHVibGljLmludmVzdC5hcGkuY29udHJhY3QudjEiOwoKTW9uZXlWYWx1ZRIQCghjdXJyZW5jeRgBIAEoCRINCgV1bml0cxgCIAEoAxIMCgRuYW5vGAMgASgFIigKCVF1b3RhdGlvbhINCgV1bml0cxgBIAEoAxIMCgRuYW5vGAIgASgFIkUKC1BpbmdSZXF1ZXN0Ei0KBHRpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSACIAQFCBwoFX3RpbWUiQQoRUGluZ0RlbGF5U2V0dGluZ3MSGgoNcGluZ19kZWxheV9tcxgPIAEoBUgAiAEBQhAKDl9waW5nX2RlbGF5X21zIpUBCgRQaW5nEigKBHRpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhEKCXN0cmVhbV9pZBgCIAEoCRI6ChFwaW5nX3JlcXVlc3RfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAIgBAUIUChJfcGluZ19yZXF1ZXN0X3RpbWUiKgoEUGFnZRINCgVsaW1pdBgBIAEoBRITCgtwYWdlX251bWJlchgCIAEoBSJHCgxQYWdlUmVzcG9uc2USDQoFbGltaXQYASABKAUSEwoLcGFnZV9udW1iZXIYAiABKAUSEwoLdG90YWxfY291bnQYAyABKAUiWAoQUmVzcG9uc2VNZXRhZGF0YRITCgt0cmFja2luZ19pZBgqIAEoCRIvCgtzZXJ2ZXJfdGltZRgrIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiSwoJQnJhbmREYXRhEhEKCWxvZ29fbmFtZRgBIAEoCRIXCg9sb2dvX2Jhc2VfY29sb3IYAiABKAkSEgoKdGV4dF9jb2xvchgDIAEoCSIsCgtFcnJvckRldGFpbBIMCgRjb2RlGAEgASgJEg8KB21lc3NhZ2UYAyABKAkq6wIKDkluc3RydW1lbnRUeXBlEh8KG0lOU1RSVU1FTlRfVFlQRV9VTlNQRUNJRklFRBAAEhgKFElOU1RSVU1FTlRfVFlQRV9CT05EEAESGQoVSU5TVFJVTUVOVF9UWVBFX1NIQVJFEAISHAoYSU5TVFJVTUVOVF9UWVBFX0NVUlJFTkNZEAMSFwoTSU5TVFJVTUVOVF9UWVBFX0VURhAEEhsKF0lOU1RSVU1FTlRfVFlQRV9GVVRVUkVTEAUSFgoSSU5TVFJVTUVOVF9UWVBFX1NQEAYSGgoWSU5TVFJVTUVOVF9UWVBFX09QVElPThAHEigKJElOU1RSVU1FTlRfVFlQRV9DTEVBUklOR19DRVJUSUZJQ0FURRAIEhkKFUlOU1RSVU1FTlRfVFlQRV9JTkRFWBAJEh0KGUlOU1RSVU1FTlRfVFlQRV9DT01NT0RJVFkQChIXChNJTlNUUlVNRU5UX1RZUEVfREZBEAsqbAoQSW5zdHJ1bWVudFN0YXR1cxIhCh1JTlNUUlVNRU5UX1NUQVRVU19VTlNQRUNJRklFRBAAEhoKFklOU1RSVU1FTlRfU1RBVFVTX0JBU0UQARIZChVJTlNUUlVNRU5UX1NUQVRVU19BTEwQAiqBBwoVU2VjdXJpdHlUcmFkaW5nU3RhdHVzEicKI1NFQ1VSSVRZX1RSQURJTkdfU1RBVFVTX1VOU1BFQ0lGSUVEEAASNQoxU0VDVVJJVFlfVFJBRElOR19TVEFUVVNfTk9UX0FWQUlMQUJMRV9GT1JfVFJBRElORxABEioKJlNFQ1VSSVRZX1RSQURJTkdfU1RBVFVTX09QRU5JTkdfUEVSSU9EEAISKgomU0VDVVJJVFlfVFJBRElOR19TVEFUVVNfQ0xPU0lOR19QRVJJT0QQAxIsCihTRUNVUklUWV9UUkFESU5HX1NUQVRVU19CUkVBS19JTl9UUkFESU5HEAQSKgomU0VDVVJJVFlfVFJBRElOR19TVEFUVVNfTk9STUFMX1RSQURJTkcQBRIrCidTRUNVUklUWV9UUkFESU5HX1NUQVRVU19DTE9TSU5HX0FVQ1RJT04QBhItCilTRUNVUklUWV9UUkFESU5HX1NUQVRVU19EQVJLX1BPT0xfQVVDVElPThAHEiwKKFNFQ1VSSVRZX1RSQURJTkdfU1RBVFVTX0RJU0NSRVRFX0FVQ1RJT04QCBIyCi5TRUNVUklUWV9UUkFESU5HX1NUQVRVU19PUEVOSU5HX0FVQ1RJT05fUEVSSU9EEAkSPAo4U0VDVVJJVFlfVFJBRElOR19TVEFUVVNfVFJBRElOR19BVF9DTE9TSU5HX0FVQ1RJT05fUFJJQ0UQChIsCihTRUNVUklUWV9UUkFESU5HX1NUQVRVU19TRVNTSU9OX0FTU0lHTkVEEAsSKQolU0VDVVJJVFlfVFJBRElOR19TVEFUVVNfU0VTU0lPTl9DTE9TRRAMEigKJFNFQ1VSSVRZX1RSQURJTkdfU1RBVFVTX1NFU1NJT05fT1BFThANEjEKLVNFQ1VSSVRZX1RSQURJTkdfU1RBVFVTX0RFQUxFUl9OT1JNQUxfVFJBRElORxAOEjMKL1NFQ1VSSVRZX1RSQURJTkdfU1RBVFVTX0RFQUxFUl9CUkVBS19JTl9UUkFESU5HEA8SPAo4U0VDVVJJVFlfVFJBRElOR19TVEFUVVNfREVBTEVSX05PVF9BVkFJTEFCTEVfRk9SX1RSQURJTkcQEBIxCi1TRUNVUklUWV9UUkFESU5HX1NUQVRVU19TVEFCSUxJWkFUSU9OX0FVQ1RJT04QESpWCglQcmljZVR5cGUSGgoWUFJJQ0VfVFlQRV9VTlNQRUNJRklFRBAAEhQKEFBSSUNFX1RZUEVfUE9JTlQQARIXChNQUklDRV9UWVBFX0NVUlJFTkNZEAIqjwEKGFJlc3VsdFN1YnNjcmlwdGlvblN0YXR1cxIqCiZSRVNVTFRfU1VCU0NSSVBUSU9OX1NUQVRVU19VTlNQRUNJRklFRBAAEiEKHVJFU1VMVF9TVUJTQ1JJUFRJT05fU1RBVFVTX09LEAESJAogUkVTVUxUX1NVQlNDUklQVElPTl9TVEFUVVNfRVJST1IQDSqNAQoMUmVhbEV4Y2hhbmdlEh0KGVJFQUxfRVhDSEFOR0VfVU5TUEVDSUZJRUQQABIWChJSRUFMX0VYQ0hBTkdFX01PRVgQARIVChFSRUFMX0VYQ0hBTkdFX1JUUxACEhUKEVJFQUxfRVhDSEFOR0VfT1RDEAMSGAoUUkVBTF9FWENIQU5HRV9ERUFMRVIQBEJhChxydS50aW5rb2ZmLnBpYXBpLmNvbnRyYWN0LnYxUAFaDC4vO2ludmVzdGFwaaICBVRJQVBJqgIUVGlua29mZi5JbnZlc3RBcGkuVjHKAhFUaW5rb2ZmXEludmVzdFxWMWIGcHJvdG8z",
-		[file_google_protobuf_timestamp],
-	);
+export const file_common: GenFile = /*@__PURE__*/
+  fileDesc("Cgxjb21tb24ucHJvdG8SJXRpbmtvZmYucHVibGljLmludmVzdC5hcGkuY29udHJhY3QudjEiOwoKTW9uZXlWYWx1ZRIQCghjdXJyZW5jeRgBIAEoCRINCgV1bml0cxgCIAEoAxIMCgRuYW5vGAMgASgFIigKCVF1b3RhdGlvbhINCgV1bml0cxgBIAEoAxIMCgRuYW5vGAIgASgFIkUKC1BpbmdSZXF1ZXN0Ei0KBHRpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSACIAQFCBwoFX3RpbWUiQQoRUGluZ0RlbGF5U2V0dGluZ3MSGgoNcGluZ19kZWxheV9tcxgPIAEoBUgAiAEBQhAKDl9waW5nX2RlbGF5X21zIpUBCgRQaW5nEigKBHRpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhEKCXN0cmVhbV9pZBgCIAEoCRI6ChFwaW5nX3JlcXVlc3RfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAIgBAUIUChJfcGluZ19yZXF1ZXN0X3RpbWUiKgoEUGFnZRINCgVsaW1pdBgBIAEoBRITCgtwYWdlX251bWJlchgCIAEoBSJHCgxQYWdlUmVzcG9uc2USDQoFbGltaXQYASABKAUSEwoLcGFnZV9udW1iZXIYAiABKAUSEwoLdG90YWxfY291bnQYAyABKAUiWAoQUmVzcG9uc2VNZXRhZGF0YRITCgt0cmFja2luZ19pZBgqIAEoCRIvCgtzZXJ2ZXJfdGltZRgrIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiSwoJQnJhbmREYXRhEhEKCWxvZ29fbmFtZRgBIAEoCRIXCg9sb2dvX2Jhc2VfY29sb3IYAiABKAkSEgoKdGV4dF9jb2xvchgDIAEoCSIsCgtFcnJvckRldGFpbBIMCgRjb2RlGAEgASgJEg8KB21lc3NhZ2UYAyABKAkq6wIKDkluc3RydW1lbnRUeXBlEh8KG0lOU1RSVU1FTlRfVFlQRV9VTlNQRUNJRklFRBAAEhgKFElOU1RSVU1FTlRfVFlQRV9CT05EEAESGQoVSU5TVFJVTUVOVF9UWVBFX1NIQVJFEAISHAoYSU5TVFJVTUVOVF9UWVBFX0NVUlJFTkNZEAMSFwoTSU5TVFJVTUVOVF9UWVBFX0VURhAEEhsKF0lOU1RSVU1FTlRfVFlQRV9GVVRVUkVTEAUSFgoSSU5TVFJVTUVOVF9UWVBFX1NQEAYSGgoWSU5TVFJVTUVOVF9UWVBFX09QVElPThAHEigKJElOU1RSVU1FTlRfVFlQRV9DTEVBUklOR19DRVJUSUZJQ0FURRAIEhkKFUlOU1RSVU1FTlRfVFlQRV9JTkRFWBAJEh0KGUlOU1RSVU1FTlRfVFlQRV9DT01NT0RJVFkQChIXChNJTlNUUlVNRU5UX1RZUEVfREZBEAsqbAoQSW5zdHJ1bWVudFN0YXR1cxIhCh1JTlNUUlVNRU5UX1NUQVRVU19VTlNQRUNJRklFRBAAEhoKFklOU1RSVU1FTlRfU1RBVFVTX0JBU0UQARIZChVJTlNUUlVNRU5UX1NUQVRVU19BTEwQAiqBBwoVU2VjdXJpdHlUcmFkaW5nU3RhdHVzEicKI1NFQ1VSSVRZX1RSQURJTkdfU1RBVFVTX1VOU1BFQ0lGSUVEEAASNQoxU0VDVVJJVFlfVFJBRElOR19TVEFUVVNfTk9UX0FWQUlMQUJMRV9GT1JfVFJBRElORxABEioKJlNFQ1VSSVRZX1RSQURJTkdfU1RBVFVTX09QRU5JTkdfUEVSSU9EEAISKgomU0VDVVJJVFlfVFJBRElOR19TVEFUVVNfQ0xPU0lOR19QRVJJT0QQAxIsCihTRUNVUklUWV9UUkFESU5HX1NUQVRVU19CUkVBS19JTl9UUkFESU5HEAQSKgomU0VDVVJJVFlfVFJBRElOR19TVEFUVVNfTk9STUFMX1RSQURJTkcQBRIrCidTRUNVUklUWV9UUkFESU5HX1NUQVRVU19DTE9TSU5HX0FVQ1RJT04QBhItCilTRUNVUklUWV9UUkFESU5HX1NUQVRVU19EQVJLX1BPT0xfQVVDVElPThAHEiwKKFNFQ1VSSVRZX1RSQURJTkdfU1RBVFVTX0RJU0NSRVRFX0FVQ1RJT04QCBIyCi5TRUNVUklUWV9UUkFESU5HX1NUQVRVU19PUEVOSU5HX0FVQ1RJT05fUEVSSU9EEAkSPAo4U0VDVVJJVFlfVFJBRElOR19TVEFUVVNfVFJBRElOR19BVF9DTE9TSU5HX0FVQ1RJT05fUFJJQ0UQChIsCihTRUNVUklUWV9UUkFESU5HX1NUQVRVU19TRVNTSU9OX0FTU0lHTkVEEAsSKQolU0VDVVJJVFlfVFJBRElOR19TVEFUVVNfU0VTU0lPTl9DTE9TRRAMEigKJFNFQ1VSSVRZX1RSQURJTkdfU1RBVFVTX1NFU1NJT05fT1BFThANEjEKLVNFQ1VSSVRZX1RSQURJTkdfU1RBVFVTX0RFQUxFUl9OT1JNQUxfVFJBRElORxAOEjMKL1NFQ1VSSVRZX1RSQURJTkdfU1RBVFVTX0RFQUxFUl9CUkVBS19JTl9UUkFESU5HEA8SPAo4U0VDVVJJVFlfVFJBRElOR19TVEFUVVNfREVBTEVSX05PVF9BVkFJTEFCTEVfRk9SX1RSQURJTkcQEBIxCi1TRUNVUklUWV9UUkFESU5HX1NUQVRVU19TVEFCSUxJWkFUSU9OX0FVQ1RJT04QESpWCglQcmljZVR5cGUSGgoWUFJJQ0VfVFlQRV9VTlNQRUNJRklFRBAAEhQKEFBSSUNFX1RZUEVfUE9JTlQQARIXChNQUklDRV9UWVBFX0NVUlJFTkNZEAIqjwEKGFJlc3VsdFN1YnNjcmlwdGlvblN0YXR1cxIqCiZSRVNVTFRfU1VCU0NSSVBUSU9OX1NUQVRVU19VTlNQRUNJRklFRBAAEiEKHVJFU1VMVF9TVUJTQ1JJUFRJT05fU1RBVFVTX09LEAESJAogUkVTVUxUX1NVQlNDUklQVElPTl9TVEFUVVNfRVJST1IQDSqNAQoMUmVhbEV4Y2hhbmdlEh0KGVJFQUxfRVhDSEFOR0VfVU5TUEVDSUZJRUQQABIWChJSRUFMX0VYQ0hBTkdFX01PRVgQARIVChFSRUFMX0VYQ0hBTkdFX1JUUxACEhUKEVJFQUxfRVhDSEFOR0VfT1RDEAMSGAoUUkVBTF9FWENIQU5HRV9ERUFMRVIQBEJhChxydS50aW5rb2ZmLnBpYXBpLmNvbnRyYWN0LnYxUAFaDC4vO2ludmVzdGFwaaICBVRJQVBJqgIUVGlua29mZi5JbnZlc3RBcGkuVjHKAhFUaW5rb2ZmXEludmVzdFxWMWIGcHJvdG8z", [file_google_protobuf_timestamp]);
 
 /**
  * Денежная сумма в определенной валюте.
  *
  * @generated from message tinkoff.public.invest.api.contract.v1.MoneyValue
  */
-export type MoneyValue =
-	Message<"tinkoff.public.invest.api.contract.v1.MoneyValue"> & {
-		/**
-		 * Строковый ISO-код валюты.
-		 *
-		 * @generated from field: string currency = 1;
-		 */
-		currency: string;
+export type MoneyValue = Message<"tinkoff.public.invest.api.contract.v1.MoneyValue"> & {
+  /**
+   * Строковый ISO-код валюты.
+   *
+   * @generated from field: string currency = 1;
+   */
+  currency: string;
 
-		/**
-		 * Целая часть суммы, может быть отрицательным числом.
-		 *
-		 * @generated from field: int64 units = 2;
-		 */
-		units: bigint;
+  /**
+   * Целая часть суммы, может быть отрицательным числом.
+   *
+   * @generated from field: int64 units = 2;
+   */
+  units: bigint;
 
-		/**
-		 * Дробная часть суммы, может быть отрицательным числом.
-		 *
-		 * @generated from field: int32 nano = 3;
-		 */
-		nano: number;
-	};
+  /**
+   * Дробная часть суммы, может быть отрицательным числом.
+   *
+   * @generated from field: int32 nano = 3;
+   */
+  nano: number;
+};
 
 /**
  * Describes the message tinkoff.public.invest.api.contract.v1.MoneyValue.
  * Use `create(MoneyValueSchema)` to create a new message.
  */
-export const MoneyValueSchema: GenMessage<MoneyValue> =
-	/*@__PURE__*/
-	messageDesc(file_common, 0);
+export const MoneyValueSchema: GenMessage<MoneyValue> = /*@__PURE__*/
+  messageDesc(file_common, 0);
 
 /**
  * Котировка — денежная сумма без указания валюты.
  *
  * @generated from message tinkoff.public.invest.api.contract.v1.Quotation
  */
-export type Quotation =
-	Message<"tinkoff.public.invest.api.contract.v1.Quotation"> & {
-		/**
-		 * Целая часть суммы, может быть отрицательным числом.
-		 *
-		 * @generated from field: int64 units = 1;
-		 */
-		units: bigint;
+export type Quotation = Message<"tinkoff.public.invest.api.contract.v1.Quotation"> & {
+  /**
+   * Целая часть суммы, может быть отрицательным числом.
+   *
+   * @generated from field: int64 units = 1;
+   */
+  units: bigint;
 
-		/**
-		 * Дробная часть суммы, может быть отрицательным числом.
-		 *
-		 * @generated from field: int32 nano = 2;
-		 */
-		nano: number;
-	};
+  /**
+   * Дробная часть суммы, может быть отрицательным числом.
+   *
+   * @generated from field: int32 nano = 2;
+   */
+  nano: number;
+};
 
 /**
  * Describes the message tinkoff.public.invest.api.contract.v1.Quotation.
  * Use `create(QuotationSchema)` to create a new message.
  */
-export const QuotationSchema: GenMessage<Quotation> =
-	/*@__PURE__*/
-	messageDesc(file_common, 1);
+export const QuotationSchema: GenMessage<Quotation> = /*@__PURE__*/
+  messageDesc(file_common, 1);
 
 /**
  * @generated from message tinkoff.public.invest.api.contract.v1.PingRequest
  */
-export type PingRequest =
-	Message<"tinkoff.public.invest.api.contract.v1.PingRequest"> & {
-		/**
-		 * Время формирования запроса.
-		 *
-		 * @generated from field: optional google.protobuf.Timestamp time = 1;
-		 */
-		time?: Timestamp;
-	};
+export type PingRequest = Message<"tinkoff.public.invest.api.contract.v1.PingRequest"> & {
+  /**
+   * Время формирования запроса.
+   *
+   * @generated from field: optional google.protobuf.Timestamp time = 1;
+   */
+  time?: Timestamp;
+};
 
 /**
  * Describes the message tinkoff.public.invest.api.contract.v1.PingRequest.
  * Use `create(PingRequestSchema)` to create a new message.
  */
-export const PingRequestSchema: GenMessage<PingRequest> =
-	/*@__PURE__*/
-	messageDesc(file_common, 2);
+export const PingRequestSchema: GenMessage<PingRequest> = /*@__PURE__*/
+  messageDesc(file_common, 2);
 
 /**
  * @generated from message tinkoff.public.invest.api.contract.v1.PingDelaySettings
  */
-export type PingDelaySettings =
-	Message<"tinkoff.public.invest.api.contract.v1.PingDelaySettings"> & {
-		/**
-		 * Задержка (пинг) сообщений:  5000–180 000 миллисекунд. Значение по умолчанию — 120 000.
-		 *
-		 * @generated from field: optional int32 ping_delay_ms = 15;
-		 */
-		pingDelayMs?: number;
-	};
+export type PingDelaySettings = Message<"tinkoff.public.invest.api.contract.v1.PingDelaySettings"> & {
+  /**
+   * Задержка (пинг) сообщений:  5000–180 000 миллисекунд. Значение по умолчанию — 120 000.
+   *
+   * @generated from field: optional int32 ping_delay_ms = 15;
+   */
+  pingDelayMs?: number;
+};
 
 /**
  * Describes the message tinkoff.public.invest.api.contract.v1.PingDelaySettings.
  * Use `create(PingDelaySettingsSchema)` to create a new message.
  */
-export const PingDelaySettingsSchema: GenMessage<PingDelaySettings> =
-	/*@__PURE__*/
-	messageDesc(file_common, 3);
+export const PingDelaySettingsSchema: GenMessage<PingDelaySettings> = /*@__PURE__*/
+  messageDesc(file_common, 3);
 
 /**
  * Проверка активности стрима.
@@ -137,188 +121,178 @@ export const PingDelaySettingsSchema: GenMessage<PingDelaySettings> =
  * @generated from message tinkoff.public.invest.api.contract.v1.Ping
  */
 export type Ping = Message<"tinkoff.public.invest.api.contract.v1.Ping"> & {
-	/**
-	 * Время проверки.
-	 *
-	 * @generated from field: google.protobuf.Timestamp time = 1;
-	 */
-	time?: Timestamp;
+  /**
+   * Время проверки.
+   *
+   * @generated from field: google.protobuf.Timestamp time = 1;
+   */
+  time?: Timestamp;
 
-	/**
-	 * Идентификатор соединения.
-	 *
-	 * @generated from field: string stream_id = 2;
-	 */
-	streamId: string;
+  /**
+   * Идентификатор соединения.
+   *
+   * @generated from field: string stream_id = 2;
+   */
+  streamId: string;
 
-	/**
-	 * Время формирования запроса.
-	 *
-	 * @generated from field: optional google.protobuf.Timestamp ping_request_time = 4;
-	 */
-	pingRequestTime?: Timestamp;
+  /**
+   * Время формирования запроса.
+   *
+   * @generated from field: optional google.protobuf.Timestamp ping_request_time = 4;
+   */
+  pingRequestTime?: Timestamp;
 };
 
 /**
  * Describes the message tinkoff.public.invest.api.contract.v1.Ping.
  * Use `create(PingSchema)` to create a new message.
  */
-export const PingSchema: GenMessage<Ping> =
-	/*@__PURE__*/
-	messageDesc(file_common, 4);
+export const PingSchema: GenMessage<Ping> = /*@__PURE__*/
+  messageDesc(file_common, 4);
 
 /**
  * @generated from message tinkoff.public.invest.api.contract.v1.Page
  */
 export type Page = Message<"tinkoff.public.invest.api.contract.v1.Page"> & {
-	/**
-	 * Максимальное число возвращаемых записей.
-	 *
-	 * @generated from field: int32 limit = 1;
-	 */
-	limit: number;
+  /**
+   * Максимальное число возвращаемых записей.
+   *
+   * @generated from field: int32 limit = 1;
+   */
+  limit: number;
 
-	/**
-	 * Порядковый номер страницы, начиная с 0.
-	 *
-	 * @generated from field: int32 page_number = 2;
-	 */
-	pageNumber: number;
+  /**
+   * Порядковый номер страницы, начиная с 0.
+   *
+   * @generated from field: int32 page_number = 2;
+   */
+  pageNumber: number;
 };
 
 /**
  * Describes the message tinkoff.public.invest.api.contract.v1.Page.
  * Use `create(PageSchema)` to create a new message.
  */
-export const PageSchema: GenMessage<Page> =
-	/*@__PURE__*/
-	messageDesc(file_common, 5);
+export const PageSchema: GenMessage<Page> = /*@__PURE__*/
+  messageDesc(file_common, 5);
 
 /**
  * @generated from message tinkoff.public.invest.api.contract.v1.PageResponse
  */
-export type PageResponse =
-	Message<"tinkoff.public.invest.api.contract.v1.PageResponse"> & {
-		/**
-		 * Максимальное число возвращаемых записей.
-		 *
-		 * @generated from field: int32 limit = 1;
-		 */
-		limit: number;
+export type PageResponse = Message<"tinkoff.public.invest.api.contract.v1.PageResponse"> & {
+  /**
+   * Максимальное число возвращаемых записей.
+   *
+   * @generated from field: int32 limit = 1;
+   */
+  limit: number;
 
-		/**
-		 * Порядковый номер страницы, начиная с 0.
-		 *
-		 * @generated from field: int32 page_number = 2;
-		 */
-		pageNumber: number;
+  /**
+   * Порядковый номер страницы, начиная с 0.
+   *
+   * @generated from field: int32 page_number = 2;
+   */
+  pageNumber: number;
 
-		/**
-		 * Общее количество записей.
-		 *
-		 * @generated from field: int32 total_count = 3;
-		 */
-		totalCount: number;
-	};
+  /**
+   * Общее количество записей.
+   *
+   * @generated from field: int32 total_count = 3;
+   */
+  totalCount: number;
+};
 
 /**
  * Describes the message tinkoff.public.invest.api.contract.v1.PageResponse.
  * Use `create(PageResponseSchema)` to create a new message.
  */
-export const PageResponseSchema: GenMessage<PageResponse> =
-	/*@__PURE__*/
-	messageDesc(file_common, 6);
+export const PageResponseSchema: GenMessage<PageResponse> = /*@__PURE__*/
+  messageDesc(file_common, 6);
 
 /**
  * @generated from message tinkoff.public.invest.api.contract.v1.ResponseMetadata
  */
-export type ResponseMetadata =
-	Message<"tinkoff.public.invest.api.contract.v1.ResponseMetadata"> & {
-		/**
-		 * Идентификатор трекинга.
-		 *
-		 * @generated from field: string tracking_id = 42;
-		 */
-		trackingId: string;
+export type ResponseMetadata = Message<"tinkoff.public.invest.api.contract.v1.ResponseMetadata"> & {
+  /**
+   * Идентификатор трекинга.
+   *
+   * @generated from field: string tracking_id = 42;
+   */
+  trackingId: string;
 
-		/**
-		 * Серверное время.
-		 *
-		 * @generated from field: google.protobuf.Timestamp server_time = 43;
-		 */
-		serverTime?: Timestamp;
-	};
+  /**
+   * Серверное время.
+   *
+   * @generated from field: google.protobuf.Timestamp server_time = 43;
+   */
+  serverTime?: Timestamp;
+};
 
 /**
  * Describes the message tinkoff.public.invest.api.contract.v1.ResponseMetadata.
  * Use `create(ResponseMetadataSchema)` to create a new message.
  */
-export const ResponseMetadataSchema: GenMessage<ResponseMetadata> =
-	/*@__PURE__*/
-	messageDesc(file_common, 7);
+export const ResponseMetadataSchema: GenMessage<ResponseMetadata> = /*@__PURE__*/
+  messageDesc(file_common, 7);
 
 /**
  * @generated from message tinkoff.public.invest.api.contract.v1.BrandData
  */
-export type BrandData =
-	Message<"tinkoff.public.invest.api.contract.v1.BrandData"> & {
-		/**
-		 * Логотип инструмента. Имя файла для получения логотипа.
-		 *
-		 * @generated from field: string logo_name = 1;
-		 */
-		logoName: string;
+export type BrandData = Message<"tinkoff.public.invest.api.contract.v1.BrandData"> & {
+  /**
+   * Логотип инструмента. Имя файла для получения логотипа.
+   *
+   * @generated from field: string logo_name = 1;
+   */
+  logoName: string;
 
-		/**
-		 * 	Цвет бренда.
-		 *
-		 * @generated from field: string logo_base_color = 2;
-		 */
-		logoBaseColor: string;
+  /**
+   * 	Цвет бренда.
+   *
+   * @generated from field: string logo_base_color = 2;
+   */
+  logoBaseColor: string;
 
-		/**
-		 * Цвет текста для цвета логотипа бренда.
-		 *
-		 * @generated from field: string text_color = 3;
-		 */
-		textColor: string;
-	};
+  /**
+   * Цвет текста для цвета логотипа бренда.
+   *
+   * @generated from field: string text_color = 3;
+   */
+  textColor: string;
+};
 
 /**
  * Describes the message tinkoff.public.invest.api.contract.v1.BrandData.
  * Use `create(BrandDataSchema)` to create a new message.
  */
-export const BrandDataSchema: GenMessage<BrandData> =
-	/*@__PURE__*/
-	messageDesc(file_common, 8);
+export const BrandDataSchema: GenMessage<BrandData> = /*@__PURE__*/
+  messageDesc(file_common, 8);
 
 /**
  * @generated from message tinkoff.public.invest.api.contract.v1.ErrorDetail
  */
-export type ErrorDetail =
-	Message<"tinkoff.public.invest.api.contract.v1.ErrorDetail"> & {
-		/**
-		 * Код ошибки.
-		 *
-		 * @generated from field: string code = 1;
-		 */
-		code: string;
+export type ErrorDetail = Message<"tinkoff.public.invest.api.contract.v1.ErrorDetail"> & {
+  /**
+   * Код ошибки.
+   *
+   * @generated from field: string code = 1;
+   */
+  code: string;
 
-		/**
-		 * Описание ошибки.
-		 *
-		 * @generated from field: string message = 3;
-		 */
-		message: string;
-	};
+  /**
+   * Описание ошибки.
+   *
+   * @generated from field: string message = 3;
+   */
+  message: string;
+};
 
 /**
  * Describes the message tinkoff.public.invest.api.contract.v1.ErrorDetail.
  * Use `create(ErrorDetailSchema)` to create a new message.
  */
-export const ErrorDetailSchema: GenMessage<ErrorDetail> =
-	/*@__PURE__*/
-	messageDesc(file_common, 9);
+export const ErrorDetailSchema: GenMessage<ErrorDetail> = /*@__PURE__*/
+  messageDesc(file_common, 9);
 
 /**
  * Тип инструмента.
@@ -326,95 +300,94 @@ export const ErrorDetailSchema: GenMessage<ErrorDetail> =
  * @generated from enum tinkoff.public.invest.api.contract.v1.InstrumentType
  */
 export enum InstrumentType {
-	/**
-	 * @generated from enum value: INSTRUMENT_TYPE_UNSPECIFIED = 0;
-	 */
-	UNSPECIFIED = 0,
+  /**
+   * @generated from enum value: INSTRUMENT_TYPE_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
 
-	/**
-	 * Облигация.
-	 *
-	 * @generated from enum value: INSTRUMENT_TYPE_BOND = 1;
-	 */
-	BOND = 1,
+  /**
+   * Облигация.
+   *
+   * @generated from enum value: INSTRUMENT_TYPE_BOND = 1;
+   */
+  BOND = 1,
 
-	/**
-	 * Акция.
-	 *
-	 * @generated from enum value: INSTRUMENT_TYPE_SHARE = 2;
-	 */
-	SHARE = 2,
+  /**
+   * Акция.
+   *
+   * @generated from enum value: INSTRUMENT_TYPE_SHARE = 2;
+   */
+  SHARE = 2,
 
-	/**
-	 * Валюта.
-	 *
-	 * @generated from enum value: INSTRUMENT_TYPE_CURRENCY = 3;
-	 */
-	CURRENCY = 3,
+  /**
+   * Валюта.
+   *
+   * @generated from enum value: INSTRUMENT_TYPE_CURRENCY = 3;
+   */
+  CURRENCY = 3,
 
-	/**
-	 * Exchange-traded fund. Фонд.
-	 *
-	 * @generated from enum value: INSTRUMENT_TYPE_ETF = 4;
-	 */
-	ETF = 4,
+  /**
+   * Exchange-traded fund. Фонд.
+   *
+   * @generated from enum value: INSTRUMENT_TYPE_ETF = 4;
+   */
+  ETF = 4,
 
-	/**
-	 * Фьючерс.
-	 *
-	 * @generated from enum value: INSTRUMENT_TYPE_FUTURES = 5;
-	 */
-	FUTURES = 5,
+  /**
+   * Фьючерс.
+   *
+   * @generated from enum value: INSTRUMENT_TYPE_FUTURES = 5;
+   */
+  FUTURES = 5,
 
-	/**
-	 * Структурная нота.
-	 *
-	 * @generated from enum value: INSTRUMENT_TYPE_SP = 6;
-	 */
-	SP = 6,
+  /**
+   * Структурная нота.
+   *
+   * @generated from enum value: INSTRUMENT_TYPE_SP = 6;
+   */
+  SP = 6,
 
-	/**
-	 * Опцион.
-	 *
-	 * @generated from enum value: INSTRUMENT_TYPE_OPTION = 7;
-	 */
-	OPTION = 7,
+  /**
+   * Опцион.
+   *
+   * @generated from enum value: INSTRUMENT_TYPE_OPTION = 7;
+   */
+  OPTION = 7,
 
-	/**
-	 * Clearing certificate.
-	 *
-	 * @generated from enum value: INSTRUMENT_TYPE_CLEARING_CERTIFICATE = 8;
-	 */
-	CLEARING_CERTIFICATE = 8,
+  /**
+   * Clearing certificate.
+   *
+   * @generated from enum value: INSTRUMENT_TYPE_CLEARING_CERTIFICATE = 8;
+   */
+  CLEARING_CERTIFICATE = 8,
 
-	/**
-	 * Индекс.
-	 *
-	 * @generated from enum value: INSTRUMENT_TYPE_INDEX = 9;
-	 */
-	INDEX = 9,
+  /**
+   * Индекс.
+   *
+   * @generated from enum value: INSTRUMENT_TYPE_INDEX = 9;
+   */
+  INDEX = 9,
 
-	/**
-	 * Товар.
-	 *
-	 * @generated from enum value: INSTRUMENT_TYPE_COMMODITY = 10;
-	 */
-	COMMODITY = 10,
+  /**
+   * Товар.
+   *
+   * @generated from enum value: INSTRUMENT_TYPE_COMMODITY = 10;
+   */
+  COMMODITY = 10,
 
-	/**
-	 * Цифровой актив.
-	 *
-	 * @generated from enum value: INSTRUMENT_TYPE_DFA = 11;
-	 */
-	DFA = 11,
+  /**
+   * Цифровой актив.
+   *
+   * @generated from enum value: INSTRUMENT_TYPE_DFA = 11;
+   */
+  DFA = 11,
 }
 
 /**
  * Describes the enum tinkoff.public.invest.api.contract.v1.InstrumentType.
  */
-export const InstrumentTypeSchema: GenEnum<InstrumentType> =
-	/*@__PURE__*/
-	enumDesc(file_common, 0);
+export const InstrumentTypeSchema: GenEnum<InstrumentType> = /*@__PURE__*/
+  enumDesc(file_common, 0);
 
 /**
  * Статус запрашиваемых инструментов.
@@ -422,34 +395,33 @@ export const InstrumentTypeSchema: GenEnum<InstrumentType> =
  * @generated from enum tinkoff.public.invest.api.contract.v1.InstrumentStatus
  */
 export enum InstrumentStatus {
-	/**
-	 * Значение не определено.
-	 *
-	 * @generated from enum value: INSTRUMENT_STATUS_UNSPECIFIED = 0;
-	 */
-	UNSPECIFIED = 0,
+  /**
+   * Значение не определено.
+   *
+   * @generated from enum value: INSTRUMENT_STATUS_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
 
-	/**
-	 * По умолчанию — базовый список инструментов, которыми можно торговать через T-Invest API. Сейчас списки доступных бумаг в API и других интерфейсах совпадают — кроме внебиржевых бумаг, но в будущем списки могут различаться.
-	 *
-	 * @generated from enum value: INSTRUMENT_STATUS_BASE = 1;
-	 */
-	BASE = 1,
+  /**
+   * По умолчанию — базовый список инструментов, которыми можно торговать через T-Invest API. Сейчас списки доступных бумаг в API и других интерфейсах совпадают — кроме внебиржевых бумаг, но в будущем списки могут различаться.
+   *
+   * @generated from enum value: INSTRUMENT_STATUS_BASE = 1;
+   */
+  BASE = 1,
 
-	/**
-	 * Список всех инструментов.
-	 *
-	 * @generated from enum value: INSTRUMENT_STATUS_ALL = 2;
-	 */
-	ALL = 2,
+  /**
+   * Список всех инструментов.
+   *
+   * @generated from enum value: INSTRUMENT_STATUS_ALL = 2;
+   */
+  ALL = 2,
 }
 
 /**
  * Describes the enum tinkoff.public.invest.api.contract.v1.InstrumentStatus.
  */
-export const InstrumentStatusSchema: GenEnum<InstrumentStatus> =
-	/*@__PURE__*/
-	enumDesc(file_common, 1);
+export const InstrumentStatusSchema: GenEnum<InstrumentStatus> = /*@__PURE__*/
+  enumDesc(file_common, 1);
 
 /**
  * Режим торгов инструмента
@@ -457,139 +429,138 @@ export const InstrumentStatusSchema: GenEnum<InstrumentStatus> =
  * @generated from enum tinkoff.public.invest.api.contract.v1.SecurityTradingStatus
  */
 export enum SecurityTradingStatus {
-	/**
-	 * Торговый статус не определен.
-	 *
-	 * @generated from enum value: SECURITY_TRADING_STATUS_UNSPECIFIED = 0;
-	 */
-	UNSPECIFIED = 0,
+  /**
+   * Торговый статус не определен.
+   *
+   * @generated from enum value: SECURITY_TRADING_STATUS_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
 
-	/**
-	 * Недоступен для торгов.
-	 *
-	 * @generated from enum value: SECURITY_TRADING_STATUS_NOT_AVAILABLE_FOR_TRADING = 1;
-	 */
-	NOT_AVAILABLE_FOR_TRADING = 1,
+  /**
+   * Недоступен для торгов.
+   *
+   * @generated from enum value: SECURITY_TRADING_STATUS_NOT_AVAILABLE_FOR_TRADING = 1;
+   */
+  NOT_AVAILABLE_FOR_TRADING = 1,
 
-	/**
-	 * Период открытия торгов.
-	 *
-	 * @generated from enum value: SECURITY_TRADING_STATUS_OPENING_PERIOD = 2;
-	 */
-	OPENING_PERIOD = 2,
+  /**
+   * Период открытия торгов.
+   *
+   * @generated from enum value: SECURITY_TRADING_STATUS_OPENING_PERIOD = 2;
+   */
+  OPENING_PERIOD = 2,
 
-	/**
-	 * Период закрытия торгов.
-	 *
-	 * @generated from enum value: SECURITY_TRADING_STATUS_CLOSING_PERIOD = 3;
-	 */
-	CLOSING_PERIOD = 3,
+  /**
+   * Период закрытия торгов.
+   *
+   * @generated from enum value: SECURITY_TRADING_STATUS_CLOSING_PERIOD = 3;
+   */
+  CLOSING_PERIOD = 3,
 
-	/**
-	 * Перерыв в торговле.
-	 *
-	 * @generated from enum value: SECURITY_TRADING_STATUS_BREAK_IN_TRADING = 4;
-	 */
-	BREAK_IN_TRADING = 4,
+  /**
+   * Перерыв в торговле.
+   *
+   * @generated from enum value: SECURITY_TRADING_STATUS_BREAK_IN_TRADING = 4;
+   */
+  BREAK_IN_TRADING = 4,
 
-	/**
-	 * Нормальная торговля.
-	 *
-	 * @generated from enum value: SECURITY_TRADING_STATUS_NORMAL_TRADING = 5;
-	 */
-	NORMAL_TRADING = 5,
+  /**
+   * Нормальная торговля.
+   *
+   * @generated from enum value: SECURITY_TRADING_STATUS_NORMAL_TRADING = 5;
+   */
+  NORMAL_TRADING = 5,
 
-	/**
-	 * Аукцион закрытия.
-	 *
-	 * @generated from enum value: SECURITY_TRADING_STATUS_CLOSING_AUCTION = 6;
-	 */
-	CLOSING_AUCTION = 6,
+  /**
+   * Аукцион закрытия.
+   *
+   * @generated from enum value: SECURITY_TRADING_STATUS_CLOSING_AUCTION = 6;
+   */
+  CLOSING_AUCTION = 6,
 
-	/**
-	 * Аукцион крупных пакетов.
-	 *
-	 * @generated from enum value: SECURITY_TRADING_STATUS_DARK_POOL_AUCTION = 7;
-	 */
-	DARK_POOL_AUCTION = 7,
+  /**
+   * Аукцион крупных пакетов.
+   *
+   * @generated from enum value: SECURITY_TRADING_STATUS_DARK_POOL_AUCTION = 7;
+   */
+  DARK_POOL_AUCTION = 7,
 
-	/**
-	 * Дискретный аукцион.
-	 *
-	 * @generated from enum value: SECURITY_TRADING_STATUS_DISCRETE_AUCTION = 8;
-	 */
-	DISCRETE_AUCTION = 8,
+  /**
+   * Дискретный аукцион.
+   *
+   * @generated from enum value: SECURITY_TRADING_STATUS_DISCRETE_AUCTION = 8;
+   */
+  DISCRETE_AUCTION = 8,
 
-	/**
-	 * Аукцион открытия.
-	 *
-	 * @generated from enum value: SECURITY_TRADING_STATUS_OPENING_AUCTION_PERIOD = 9;
-	 */
-	OPENING_AUCTION_PERIOD = 9,
+  /**
+   * Аукцион открытия.
+   *
+   * @generated from enum value: SECURITY_TRADING_STATUS_OPENING_AUCTION_PERIOD = 9;
+   */
+  OPENING_AUCTION_PERIOD = 9,
 
-	/**
-	 * Период торгов по цене аукциона закрытия.
-	 *
-	 * @generated from enum value: SECURITY_TRADING_STATUS_TRADING_AT_CLOSING_AUCTION_PRICE = 10;
-	 */
-	TRADING_AT_CLOSING_AUCTION_PRICE = 10,
+  /**
+   * Период торгов по цене аукциона закрытия.
+   *
+   * @generated from enum value: SECURITY_TRADING_STATUS_TRADING_AT_CLOSING_AUCTION_PRICE = 10;
+   */
+  TRADING_AT_CLOSING_AUCTION_PRICE = 10,
 
-	/**
-	 * Сессия назначена.
-	 *
-	 * @generated from enum value: SECURITY_TRADING_STATUS_SESSION_ASSIGNED = 11;
-	 */
-	SESSION_ASSIGNED = 11,
+  /**
+   * Сессия назначена.
+   *
+   * @generated from enum value: SECURITY_TRADING_STATUS_SESSION_ASSIGNED = 11;
+   */
+  SESSION_ASSIGNED = 11,
 
-	/**
-	 * Сессия закрыта.
-	 *
-	 * @generated from enum value: SECURITY_TRADING_STATUS_SESSION_CLOSE = 12;
-	 */
-	SESSION_CLOSE = 12,
+  /**
+   * Сессия закрыта.
+   *
+   * @generated from enum value: SECURITY_TRADING_STATUS_SESSION_CLOSE = 12;
+   */
+  SESSION_CLOSE = 12,
 
-	/**
-	 * Сессия открыта.
-	 *
-	 * @generated from enum value: SECURITY_TRADING_STATUS_SESSION_OPEN = 13;
-	 */
-	SESSION_OPEN = 13,
+  /**
+   * Сессия открыта.
+   *
+   * @generated from enum value: SECURITY_TRADING_STATUS_SESSION_OPEN = 13;
+   */
+  SESSION_OPEN = 13,
 
-	/**
-	 * Доступна торговля в режиме внутренней ликвидности брокера.
-	 *
-	 * @generated from enum value: SECURITY_TRADING_STATUS_DEALER_NORMAL_TRADING = 14;
-	 */
-	DEALER_NORMAL_TRADING = 14,
+  /**
+   * Доступна торговля в режиме внутренней ликвидности брокера.
+   *
+   * @generated from enum value: SECURITY_TRADING_STATUS_DEALER_NORMAL_TRADING = 14;
+   */
+  DEALER_NORMAL_TRADING = 14,
 
-	/**
-	 * Перерыв торговли в режиме внутренней ликвидности брокера.
-	 *
-	 * @generated from enum value: SECURITY_TRADING_STATUS_DEALER_BREAK_IN_TRADING = 15;
-	 */
-	DEALER_BREAK_IN_TRADING = 15,
+  /**
+   * Перерыв торговли в режиме внутренней ликвидности брокера.
+   *
+   * @generated from enum value: SECURITY_TRADING_STATUS_DEALER_BREAK_IN_TRADING = 15;
+   */
+  DEALER_BREAK_IN_TRADING = 15,
 
-	/**
-	 * Недоступна торговля в режиме внутренней ликвидности брокера.
-	 *
-	 * @generated from enum value: SECURITY_TRADING_STATUS_DEALER_NOT_AVAILABLE_FOR_TRADING = 16;
-	 */
-	DEALER_NOT_AVAILABLE_FOR_TRADING = 16,
+  /**
+   * Недоступна торговля в режиме внутренней ликвидности брокера.
+   *
+   * @generated from enum value: SECURITY_TRADING_STATUS_DEALER_NOT_AVAILABLE_FOR_TRADING = 16;
+   */
+  DEALER_NOT_AVAILABLE_FOR_TRADING = 16,
 
-	/**
-	 * Аукцион обновления цен.
-	 *
-	 * @generated from enum value: SECURITY_TRADING_STATUS_STABILIZATION_AUCTION = 17;
-	 */
-	STABILIZATION_AUCTION = 17,
+  /**
+   * Аукцион обновления цен.
+   *
+   * @generated from enum value: SECURITY_TRADING_STATUS_STABILIZATION_AUCTION = 17;
+   */
+  STABILIZATION_AUCTION = 17,
 }
 
 /**
  * Describes the enum tinkoff.public.invest.api.contract.v1.SecurityTradingStatus.
  */
-export const SecurityTradingStatusSchema: GenEnum<SecurityTradingStatus> =
-	/*@__PURE__*/
-	enumDesc(file_common, 2);
+export const SecurityTradingStatusSchema: GenEnum<SecurityTradingStatus> = /*@__PURE__*/
+  enumDesc(file_common, 2);
 
 /**
  * Тип цены.
@@ -597,67 +568,65 @@ export const SecurityTradingStatusSchema: GenEnum<SecurityTradingStatus> =
  * @generated from enum tinkoff.public.invest.api.contract.v1.PriceType
  */
 export enum PriceType {
-	/**
-	 * Значение не определено.
-	 *
-	 * @generated from enum value: PRICE_TYPE_UNSPECIFIED = 0;
-	 */
-	UNSPECIFIED = 0,
+  /**
+   * Значение не определено.
+   *
+   * @generated from enum value: PRICE_TYPE_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
 
-	/**
-	 * Цена в пунктах (только для фьючерсов и облигаций).
-	 *
-	 * @generated from enum value: PRICE_TYPE_POINT = 1;
-	 */
-	POINT = 1,
+  /**
+   * Цена в пунктах (только для фьючерсов и облигаций).
+   *
+   * @generated from enum value: PRICE_TYPE_POINT = 1;
+   */
+  POINT = 1,
 
-	/**
-	 * Цена в валюте расчетов по инструменту.
-	 *
-	 * @generated from enum value: PRICE_TYPE_CURRENCY = 2;
-	 */
-	CURRENCY = 2,
+  /**
+   * Цена в валюте расчетов по инструменту.
+   *
+   * @generated from enum value: PRICE_TYPE_CURRENCY = 2;
+   */
+  CURRENCY = 2,
 }
 
 /**
  * Describes the enum tinkoff.public.invest.api.contract.v1.PriceType.
  */
-export const PriceTypeSchema: GenEnum<PriceType> =
-	/*@__PURE__*/
-	enumDesc(file_common, 3);
+export const PriceTypeSchema: GenEnum<PriceType> = /*@__PURE__*/
+  enumDesc(file_common, 3);
 
 /**
  * @generated from enum tinkoff.public.invest.api.contract.v1.ResultSubscriptionStatus
  */
 export enum ResultSubscriptionStatus {
-	/**
-	 * Статус подписки не определен.
-	 *
-	 * @generated from enum value: RESULT_SUBSCRIPTION_STATUS_UNSPECIFIED = 0;
-	 */
-	UNSPECIFIED = 0,
+  /**
+   * Статус подписки не определен.
+   *
+   * @generated from enum value: RESULT_SUBSCRIPTION_STATUS_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
 
-	/**
-	 * Подписка успешно установлена.
-	 *
-	 * @generated from enum value: RESULT_SUBSCRIPTION_STATUS_OK = 1;
-	 */
-	OK = 1,
+  /**
+   * Подписка успешно установлена.
+   *
+   * @generated from enum value: RESULT_SUBSCRIPTION_STATUS_OK = 1;
+   */
+  OK = 1,
 
-	/**
-	 * Ошибка подписки
-	 *
-	 * @generated from enum value: RESULT_SUBSCRIPTION_STATUS_ERROR = 13;
-	 */
-	ERROR = 13,
+  /**
+   * Ошибка подписки
+   *
+   * @generated from enum value: RESULT_SUBSCRIPTION_STATUS_ERROR = 13;
+   */
+  ERROR = 13,
 }
 
 /**
  * Describes the enum tinkoff.public.invest.api.contract.v1.ResultSubscriptionStatus.
  */
-export const ResultSubscriptionStatusSchema: GenEnum<ResultSubscriptionStatus> =
-	/*@__PURE__*/
-	enumDesc(file_common, 4);
+export const ResultSubscriptionStatusSchema: GenEnum<ResultSubscriptionStatus> = /*@__PURE__*/
+  enumDesc(file_common, 4);
 
 /**
  * Реальная площадка исполнения расчетов.
@@ -665,45 +634,45 @@ export const ResultSubscriptionStatusSchema: GenEnum<ResultSubscriptionStatus> =
  * @generated from enum tinkoff.public.invest.api.contract.v1.RealExchange
  */
 export enum RealExchange {
-	/**
-	 * Тип не определен.
-	 *
-	 * @generated from enum value: REAL_EXCHANGE_UNSPECIFIED = 0;
-	 */
-	UNSPECIFIED = 0,
+  /**
+   * Тип не определен.
+   *
+   * @generated from enum value: REAL_EXCHANGE_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
 
-	/**
-	 * Московская биржа.
-	 *
-	 * @generated from enum value: REAL_EXCHANGE_MOEX = 1;
-	 */
-	MOEX = 1,
+  /**
+   * Московская биржа.
+   *
+   * @generated from enum value: REAL_EXCHANGE_MOEX = 1;
+   */
+  MOEX = 1,
 
-	/**
-	 * Санкт-Петербургская биржа.
-	 *
-	 * @generated from enum value: REAL_EXCHANGE_RTS = 2;
-	 */
-	RTS = 2,
+  /**
+   * Санкт-Петербургская биржа.
+   *
+   * @generated from enum value: REAL_EXCHANGE_RTS = 2;
+   */
+  RTS = 2,
 
-	/**
-	 * Внебиржевой инструмент.
-	 *
-	 * @generated from enum value: REAL_EXCHANGE_OTC = 3;
-	 */
-	OTC = 3,
+  /**
+   * Внебиржевой инструмент.
+   *
+   * @generated from enum value: REAL_EXCHANGE_OTC = 3;
+   */
+  OTC = 3,
 
-	/**
-	 * Инструмент, торгуемый на площадке брокера.
-	 *
-	 * @generated from enum value: REAL_EXCHANGE_DEALER = 4;
-	 */
-	DEALER = 4,
+  /**
+   * Инструмент, торгуемый на площадке брокера.
+   *
+   * @generated from enum value: REAL_EXCHANGE_DEALER = 4;
+   */
+  DEALER = 4,
 }
 
 /**
  * Describes the enum tinkoff.public.invest.api.contract.v1.RealExchange.
  */
-export const RealExchangeSchema: GenEnum<RealExchange> =
-	/*@__PURE__*/
-	enumDesc(file_common, 5);
+export const RealExchangeSchema: GenEnum<RealExchange> = /*@__PURE__*/
+  enumDesc(file_common, 5);
+
