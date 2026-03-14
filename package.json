@@ -10,6 +10,11 @@
 			"import": "./dist/index.js",
 			"require": "./dist/index.umd.cjs",
 			"types": "./dist/index.d.ts"
+		},
+		"./converters": {
+			"import": "./dist/converters/index.js",
+			"require": "./dist/converters/index.cjs",
+			"types": "./dist/converters/index.d.ts"
 		}
 	},
 	"scripts": {
