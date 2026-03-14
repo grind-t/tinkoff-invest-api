@@ -1,41 +1,48 @@
 {
-  "name": "@grind-t/tinkoff-invest-api",
-  "version": "1.0.0",
-  "type": "module",
-  "files": [
-    "dist"
-  ],
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.umd.cjs",
-      "types": "./dist/index.d.ts"
-    }
-  },
-  "scripts": {
-    "typecheck": "tsc --noEmit",
-    "lint": "npx @biomejs/biome check --write ./src",
-    "test:unit": "node --experimental-transform-types --experimental-test-module-mocks --test \"src/**/*.unit.test.ts\"",
-    "test:e2e": "node --experimental-transform-types --experimental-test-module-mocks --test \"src/**/*.e2e.test.ts\"",
-    "test": "node --experimental-transform-types --experimental-test-module-mocks --test \"src/**/*.test.ts\"",
-    "check": "npm run typecheck && npm run lint && npm run test",
-    "build": "tsup"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/grind-t/tinkoff-invest-api.git"
-  },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/grind-t/tinkoff-invest-api/issues"
-  },
-  "homepage": "https://github.com/grind-t/tinkoff-invest-api#readme",
-  "devDependencies": {
-    "@biomejs/biome": "latest",
-    "@microsoft/api-extractor": "latest",
-    "@swc/core": "latest",
-    "@types/node": "latest",
-    "tsup": "latest",
-    "typescript": "latest"
-  }
+	"name": "@grind-t/tinkoff-invest-api",
+	"version": "1.0.0",
+	"type": "module",
+	"files": [
+		"dist"
+	],
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"require": "./dist/index.umd.cjs",
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"lint": "npx @biomejs/biome check --write",
+		"test:unit": "node --experimental-transform-types --experimental-test-module-mocks --test \"src/**/*.unit.test.ts\"",
+		"test:e2e": "node --experimental-transform-types --experimental-test-module-mocks --test \"src/**/*.e2e.test.ts\"",
+		"test": "node --experimental-transform-types --experimental-test-module-mocks --test \"src/**/*.test.ts\"",
+		"check": "npm run typecheck && npm run lint && npm run test",
+		"build": "tsup",
+		"contracts:pull": "node --experimental-transform-types ./scripts/pull-contracts.ts",
+		"contracts:generate": "buf generate"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/grind-t/tinkoff-invest-api.git"
+	},
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/grind-t/tinkoff-invest-api/issues"
+	},
+	"homepage": "https://github.com/grind-t/tinkoff-invest-api#readme",
+	"devDependencies": {
+		"@biomejs/biome": "latest",
+		"@bufbuild/buf": "^1.66.1",
+		"@bufbuild/protobuf": "^2.11.0",
+		"@bufbuild/protoc-gen-es": "^2.11.0",
+		"@microsoft/api-extractor": "latest",
+		"@swc/core": "latest",
+		"@types/fs-extra": "^11.0.4",
+		"@types/node": "latest",
+		"tsup": "latest",
+		"typescript": "latest",
+		"zx": "^8.8.5"
+	}
 }
