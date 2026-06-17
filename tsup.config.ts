@@ -1,8 +1,8 @@
 import { defineConfig } from "tsup";
 
 export default defineConfig({
-  name: "@grind-t/tinkoff-invest-api",
-  entry: ["src/index.ts", "src/converters/index.ts"],
+  name: "@grind-t/t-invest",
+  entry: ["src/index.ts"],
   outDir: "dist",
   format: ["esm", "cjs"],
   experimentalDts: true,

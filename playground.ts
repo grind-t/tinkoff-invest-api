@@ -1,8 +1,6 @@
 import { env } from 'node:process';
 import { T_INVEST_SANDBOX_URL, TInvestApi } from './src/index.ts';
 
-env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
-
 const token = env.T_INVEST_READONLY_TOKEN as string;
 
 const api = new TInvestApi(token, T_INVEST_SANDBOX_URL);

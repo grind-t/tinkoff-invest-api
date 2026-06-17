@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import {
 	type Client,
 	createClient,
@@ -13,6 +15,8 @@ import { SignalService } from "../gen/signals_pb.ts";
 import { StopOrdersService } from "../gen/stoporders_pb.ts";
 import { UsersService } from "../gen/users_pb.ts";
 import { T_INVEST_PROD_URL } from "./environments.ts";
+
+const ca = readFileSync(join(import.meta.dirname, "russian-trusted-ca.pem"));
 
 export class TInvestApi {
 	public instruments: Client<typeof InstrumentsService>;
@@ -34,6 +38,7 @@ export class TInvestApi {
 		const transport = createGrpcTransport({
 			baseUrl,
 			interceptors: [baseInterceptor],
+			nodeOptions: { ca },
 		});
 
 		this.instruments = createClient(InstrumentsService, transport);
