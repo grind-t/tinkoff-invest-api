@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
-import { join } from "node:path";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 import {
 	type Client,
 	createClient,
@@ -16,7 +17,8 @@ import { StopOrdersService } from "../gen/stoporders_pb.ts";
 import { UsersService } from "../gen/users_pb.ts";
 import { T_INVEST_PROD_URL } from "./environments.ts";
 
-const ca = readFileSync(join(import.meta.dirname, "russian-trusted-ca.pem"));
+const dir = dirname(fileURLToPath(import.meta.url));
+const ca = readFileSync(join(dir, "ca.pem"));
 
 export class TInvestApi {
 	public instruments: Client<typeof InstrumentsService>;

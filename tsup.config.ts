@@ -1,3 +1,4 @@
+import { copyFile } from "node:fs/promises";
 import { defineConfig } from "tsup";
 
 export default defineConfig({
@@ -7,4 +8,8 @@ export default defineConfig({
   format: ["esm", "cjs"],
   experimentalDts: true,
   clean: true,
+  shims: true,
+  onSuccess: async () => {
+    await copyFile('src/client/ca.pem', 'dist/ca.pem')
+  }
 });
